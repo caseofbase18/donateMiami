@@ -1,3 +1,6 @@
+# Donate Miami
+Is web application that will let you donate to local non profits. You can donate your time or money.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
