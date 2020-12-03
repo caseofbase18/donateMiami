@@ -1,37 +1,21 @@
 import React from 'react';
 
-// materialize
+// bootstrap
 function Signin() {
     return (
         // logo
-        <body>
-            <div className="row">
-                <form className="col s12">
-                    <div className="row">
-                        <div className="input-field col s12">
-                            <input id="email" type="email" className="validate">
-                                <label for="email">Email</label>
-                            </input>
-                        </div>
-
-                        <div className="row">
-                            <div className="input-field col s12">
-                                <input id="password" type="password" className="validate">
-                                    <label for="password">Password</label>
-                                </input>
-                            </div>
-                        </div>
-
-                        <div className="row">
-                            <button className="btn waves-effect waves-light" type="submit" name="action">Submit
-                            <i className="material-icons right">send</i>
-                            </button>
-                            <a className="waves-effect waves-light btn">Sign-up Here!</a>
-                        </div>
-                    </div>
-                </form>
+        <form>
+            <div className="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
+                <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
-        </body>
+            <div className="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" className="form-control" id="exampleInputPassword1"></input>
+            </div>
+            <button type="submit" className="btn btn-primary">Submit!</button>
+        </form>
     )
 }
 
