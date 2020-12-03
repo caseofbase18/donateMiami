@@ -1,15 +1,24 @@
 import React from "react";
-import './style.css';
+import Table from "../components/Table";
+
 
 function Home() {
-  return (
+  
+
+
+    return (
       <div>
         <h1>Home Page</h1>
         <p>
-          This page will render all organizations in cards.
-        </p>
+          This page will render all organizations from the database in a table.
+      </p>
+
+        <Table />
+        
       </div>
-  );
-}
+    );
+  }
+
+
 
 export default Home;
