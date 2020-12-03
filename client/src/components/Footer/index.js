@@ -1,34 +1,44 @@
-import React from 'react';
+import React from "react";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
-// materialize
-function Footer() {
-    return (
-        <footer className="page-footer">
-          <div className="container">
-            <div className="row">
-              <div className="col l6 s12">
-                  {/* add favicon before h5 text */}
-                <h5 className="white-text">Thank you!</h5>
-                <p className="grey-text text-lighten-4">We hope that Donate Miami has helped you choose how you would like to support our local communities.</p>
-              </div>
-              <div className="col l4 offset-l2 s12">
-                <h5 className="white-text">Links: Check us out!</h5>
-                <ul>
-                  <li><a className="grey-text text-lighten-3" href="#!">Casey GitHub Link</a></li>
-                  <li><a className="grey-text text-lighten-3" href="#!">Lisa GitHub Link</a></li>
-                  <li><a className="grey-text text-lighten-3" href="#!">Jorge GitHub Link</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="footer-copyright">
-            <div className="container">
-            © 2020, Donate Miami
-            </div>
-          </div>
-        </footer>
-
-    )
+// bootstrap
+const Footer = () => {
+  return (
+    <MDBFooter color="blue" className="font-small pt-4 mt-4">
+      <MDBContainer fluid className="text-center text-md-left">
+        <MDBRow>
+          <MDBCol md="6">
+            <h5 className="title">Thank you!</h5>
+            <p>
+            We hope that Donate Miami has helped you choose how you would like to support our local communities.
+            </p>
+          </MDBCol>
+          <MDBCol md="6">
+            <h5 className="title">Links: Check us out!</h5>
+            <ul>
+              <li className="list-unstyled">
+                {/* thumbnail pic */}
+                <a href="#!">Casey GitHub</a>
+              </li>
+              <li className="list-unstyled">
+                {/* thumbnail pic */}
+                <a href="#!">Lisa GitHub</a>
+              </li>
+              <li className="list-unstyled">
+                {/* thumbnail pic */}
+                <a href="#!">Jorge GitHub</a>
+              </li>
+            </ul>
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
+      <div className="footer-copyright text-center py-3">
+        <MDBContainer fluid>
+          &copy; {new Date().getFullYear()} Copyright: <a href="#!"> donatemiami.com </a>
+        </MDBContainer>
+      </div>
+    </MDBFooter>
+  );
 }
 
 export default Footer;
