@@ -20,9 +20,21 @@ background-size: cover;
 /* Set a background color that will be displayed
    while the background image is loading */
 background-color: white;
-
 }
 
+input {
+   box-shadow: 5px 5px lightgrey;
+}
+
+#inputState {
+   box-shadow: 5px 5px lightgrey;
+}
+
+
+#inputOrganization {
+   box-shadow: 5px 5px lightgrey;
+}
+=======
 .table {
    background-color: #faf5a6;   
 }
