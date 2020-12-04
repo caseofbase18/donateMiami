@@ -30,6 +30,16 @@ input {
    box-shadow: 5px 5px lightgrey;
 }
 
+
 #inputOrganization {
    box-shadow: 5px 5px lightgrey;
+}
+=======
+.table {
+   background-color: #faf5a6;   
+}
+
+.externalLink {
+   color: #0000FF !important;
+   text-decoration: underline;
 }
