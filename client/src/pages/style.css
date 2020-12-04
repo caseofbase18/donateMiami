@@ -22,3 +22,12 @@ background-size: cover;
 background-color: white;
 
 }
+
+.table {
+   background-color: #faf5a6;   
+}
+
+.externalLink {
+   color: #0000FF !important;
+   text-decoration: underline;
+}
