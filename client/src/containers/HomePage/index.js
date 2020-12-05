@@ -3,6 +3,7 @@ import React from 'react';
 import Header from "../../components/Header";
 import NavTabs from "../../components/NavTabs";
 import Footer from "../../components/Footer";
+import Table from "../../components/Table"
 
 const HomePage=()=>{
     return <div>
@@ -16,9 +17,7 @@ const HomePage=()=>{
         Welcome to Donate Miami! Use the buttons below to make a donation of your time or money to a local non-profit charity.
     </p>
 
-    {/* <AppContainer />
-
-    <Table /> */}
+    <Table />
 
     <Footer />
     </div>

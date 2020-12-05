@@ -28,6 +28,7 @@
     "mongo-seeding": "^3.5.0",
     "mongoose": "^5.11.4",
     "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "react-calendar": "^3.2.1"
   }
 }

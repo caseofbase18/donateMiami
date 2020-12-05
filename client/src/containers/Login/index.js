@@ -1,14 +1,17 @@
 import React from 'react';
-import LoginForm from '../../components/LoginForm';
+import Header from "../../components/Header";
+import SigninForm from '../../components/SigninForm';
 import {useStoreContext} from '../../utils/GlobalState';
 import {LOG_IN} from '../../utils/actions';
 
 
 const LoginPage=()=>{
     const [state,dispatch]=useStoreContext();
-    return <div>LoginPage
+    return <div>
+        <Header />
+        <h1>Sign In Page</h1>
 
-            <LoginForm onLogIn={(account)=>{
+            <SigninForm onLogIn={(account)=>{
                 localStorage.setItem("authorization-token",account.token);
                 dispatch({
                     type:LOG_IN,
