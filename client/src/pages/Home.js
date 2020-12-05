@@ -16,9 +16,9 @@ function Home() {
 
       <Header />
 
-      <AppContainer />
+      {/* <AppContainer />
 
-      <Table />
+      <Table /> */}
 
       <Footer />
 
