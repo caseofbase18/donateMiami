@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { string } = require("prop-types");
 const Schema = mongoose.Schema;
 
-const nonProfitsSchema = new Schema ({
+const nonProfitSchema = new Schema ({
     name: {
         type: String,
     },
@@ -43,11 +43,11 @@ const nonProfitsSchema = new Schema ({
     },
     favorites: [{
         type: mongoose.SchemaTypes.ObjectId,
-        ref: "NonProfits",
+        ref: "NonProfit",
     }]
 
 });
 
-const NonProfits  = mongoose.model("NonProfits", nonProfitsSchema);
+const NonProfit  = mongoose.model("NonProfit", nonProfitSchema);
 
-module.exports = NonProfits;
+module.exports = NonProfit;
