@@ -1,10 +1,23 @@
 const express = require("express");
 const mongoose = require("mongoose");
-
+const routes = require("./routes");
 // const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3003;
+/* Passport config */
+const session = require("express-session");
+const passport = require("./config/passport");
+app.use(function(req,res,next) {
+  req.working="This works!";
+  next();
+})
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
+// Define middleware here
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -15,7 +28,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Define API routes here
-// app.use(routes);
+  app.use(routes);
 
 // Connect to the Mongo DB
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/donateMiami";
