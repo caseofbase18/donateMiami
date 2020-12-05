@@ -1,18 +1,13 @@
 import React from "react";
-import AppContainer from "./components/AppContainer";
-
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import { StoreProvider } from "./utils/GlobalState";
+import RootContainer from './RootContainer';
 
 function App() {
   return (
-    <div className="container">
+    <StoreProvider>
+       <RootContainer />
+    </StoreProvider>
 
-      <Header />
-      <AppContainer />
-      <Footer />
-
-    </div>
   );
 }
 
