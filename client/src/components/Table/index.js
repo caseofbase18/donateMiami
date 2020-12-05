@@ -1,6 +1,8 @@
 import React from 'react';
 import nonProfits from "../../nonProfitSeed.json";
 import "../../pages/style.css";
+import "./style.css";
+
 
 function Table(props) {
 
@@ -78,8 +80,13 @@ function Table(props) {
             )
           })
         }
+
       </tbody>
+
     </table>
+    
+    
+    
 
   )
 }
