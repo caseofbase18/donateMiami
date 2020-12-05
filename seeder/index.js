@@ -4,14 +4,14 @@ const {Seeder} = require("mongo-seeding");
 const config = {
     database: {
         host: "localhost",
-        port: 3003,
+        port: 27017,
         name: "donateMiami"
     },
     dropDatabase: true,
 };
 
-const Seeder = new Seeder(config);
-const collections = seeder.readCollectionFromPath(path.resolve("./import_data/nonProfitSeed.json"),
+const seeder = new Seeder(config);
+const collections = seeder.readCollectionsFromPath(path.resolve("../data"),
     {
         transformers: [Seeder.Transformers.replaceDocumentIdWithUnderscoreId],
     },
