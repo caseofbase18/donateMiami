@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import API from '../../utils/API';
 
-const SigninForm = (props) => {
+const LoginForm = (props) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -40,9 +40,9 @@ const SigninForm = (props) => {
                     type="password" className="form-control" id="password"></input>
             </div>
 
-            <button onClick={logIn} className="btn btn-primary shadow">Sign in</button>
+            <button onClick={logIn} className="btn btn-primary shadow">Log in</button>
         </div>
     )
 }
 
-export default SigninForm;
+export default LoginForm;

@@ -1,25 +1,19 @@
 import React from 'react';
 
 import Header from "../../components/Header";
-import NavTabs from "../../components/NavTabs";
 import Footer from "../../components/Footer";
-import Table from "../../components/Table"
 
-const HomePage=()=>{
+const HomePage = () => {
     return <div>
 
-    <Header />
+        <Header />
 
-    <NavTabs />
+        <h1>Home Page</h1>
+        <h2>Welcome to Donate Miami!</h2>
 
-    <h1>Home Page</h1>
-    <p>
-        Welcome to Donate Miami! Use the buttons below to make a donation of your time or money to a local non-profit charity.
-    </p>
+        <p>Sign in or sign up to make a donation to a local charity.</p>
 
-    <Table />
-
-    <Footer />
+        <Footer />
     </div>
 }
 export default HomePage;

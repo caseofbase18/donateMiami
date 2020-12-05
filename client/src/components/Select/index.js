@@ -1,9 +1,7 @@
 import React from "react";
-import nonProfits from "../nonProfitSeed.json";
+import nonProfits from "../../nonProfitSeed.json";
 
-
-
-function Search() {
+function Select() {
 
   const uniqueCategories = [];
   nonProfits.forEach(nonProfit => {
@@ -14,13 +12,12 @@ function Search() {
   });
 
   function handleInputChange(event) {
-    //const { name, value } = event.target;
-    console.log(event);
+    const { name, value } = event.target;
+    console.log(event.target.value);
   };
 
   return (
     <div>
-      <h1>Search Page</h1>
       <p>
         Select a category to see a list of non-profit organizations by type.
       </p>
@@ -46,4 +43,4 @@ function Search() {
   );
 }
 
-export default Search;
+export default Select;
