@@ -34,12 +34,17 @@ input {
 #inputOrganization {
    box-shadow: 5px 5px lightgrey;
 }
-=======
+
 .table {
-   background-color: #faf5a6;   
+   background-color: #eaee91;   
 }
 
 .externalLink {
    color: #0000FF !important;
    text-decoration: underline;
 }
+
+.customBtn {
+   width: 220px !important;
+}
+

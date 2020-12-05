@@ -5,6 +5,10 @@ function Donate() {
     return (
         //logo
         <body>
+
+            <h1>Donate Form</h1>
+            <p>Select an organization and fill in the amount of your financial contribution.</p>
+            
             <form>
 
                 <div className="form-row">
