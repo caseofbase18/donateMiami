@@ -33,3 +33,27 @@ input {
 #inputOrganization {
    box-shadow: 5px 5px lightgrey;
 }
+
+.table {
+   background-color: #faf5a6;
+   border-radius: 5px; 
+   border-spacing: 10px;
+   margin-bottom: 20px;
+   
+}
+
+.externalLink {
+   color: #0000FF !important;
+   text-decoration: underline;
+}
+
+button {
+   border-radius: 5px;
+}
+
+table {
+   margin-bottom: 5px;
+}
+
+
+
