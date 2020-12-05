@@ -22,9 +22,7 @@ function Search() {
     <div>
       <h1>Search Page</h1>
       <p>
-        ADD the seach dropdown to the navbar/header jumbotron
-
-        DELETE the search page
+        Select a category to see a list of non-profit organizations by type.
       </p>
 
       <form>

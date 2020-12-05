@@ -10,7 +10,7 @@ function Home() {
       <div>
         <h1>Home Page</h1>
         <p>
-          This page will render all organizations from the database in a table.
+          Welcome to Donate Miami! Use the buttons below to make a donation of your time or money to a local non-profit charity.
       </p>
 
         <Table />

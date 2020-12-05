@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 // npm install react-calendar
 
 import Calendar from 'react-calendar';
- 
+
 // function MyApp() {
 //   const [value, onChange] = useState(new Date());
- 
+
 //   return (
 //     <div>
 //       <Calendar
@@ -26,6 +26,11 @@ function Volunteer() {
     return (
         //logo
         <body>
+
+            <h1>Volunteer Form</h1>
+            <p>Select an organization, the date of your availability, and how may hours you would like to contribute.</p>
+
+
             <form>
                 <div className="form-row">
                     <div className="form-group col-md-6">
@@ -149,7 +154,7 @@ function Volunteer() {
                             <option value="Mystic">Mystic Force Foundation</option>
                             <option value="Sundari">Sundari Foundation, Inc.</option>
                             <option value="Artefactus">Artefactus Cultural Project</option>
-                            
+
                         </select>
                     </div>
 
@@ -163,11 +168,13 @@ function Volunteer() {
                         <input type="text" className="form-control" id="inputAvailableDates" placeholder="e.g. 1/1/2021, 2/3/2021"></input>
 
                         <div className="form-group col-md-4">
-                            
-                        <Calendar
-                            onChange={onChange}
-                            value={value}
-                        />
+
+                            <br></br>
+
+                            <Calendar
+                                onChange={onChange}
+                                value={value}
+                            />
                         </div>
 
                     </div>
