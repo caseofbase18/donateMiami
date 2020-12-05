@@ -8,9 +8,9 @@ import Signup from "../pages/Sign-up";
 const PublicRoutes=()=>{
     return <Router>
         <Switch>
-            <Route exact={true} path="/signin" component={Signin} />
-            <Route exact={true} path="/signup" component={Signup} />
-            <Route exact={true} path="/home" component={Home} />uop
+            {/* <Route exact={true} path="/signin" component={Signin} />
+            <Route exact={true} path="/signup" component={Signup} /> */}
+            <Route exact={true} path="/home" component={Home} />
             <Redirect to="/home" />
         </Switch>
         </Router>

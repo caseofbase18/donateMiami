@@ -27,6 +27,7 @@
     "mdbreact": "^5.0.0",
     "mongo-seeding": "^3.5.0",
     "mongoose": "^5.11.4",
+    "passport": "^0.4.1",
     "react-calendar": "^3.2.1"
   }
 }
