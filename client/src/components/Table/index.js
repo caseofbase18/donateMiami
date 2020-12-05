@@ -35,26 +35,15 @@ function Table(props) {
           nonProfits.map((nonProfit, index) => {
             return (
 
-              // make the entire cell of the table clickable, re-rendering the page with donate/volunteer form
               <tr key={index}>
                 <td>
                   <div className="row">
-                    <div className="col-md-4">
+                    <div className="col-md-4 col-sm-12">
                       <div className="row">
-                        <div className="col-12"><img src={nonProfit.imageURL} alt={nonProfit.name} style={{ height: 150, paddingLeft: 50 }} /></div>
-                      </div>
-                      <div className="row">
-                        <div style={{ paddingLeft: 75 }} className="col-12">
-                          <button type="button" className="btn btn-warning btn-sm shadow"
-                            onClick={(event) => {
-                              event.preventDefault();
-                              addFavorite(nonProfit.name);
-                              // undefined
-                            }}><span className="fa fa-heart"></span>&nbsp;&nbsp;&nbsp;Add To Favorites</button>
-                        </div>
+                        <div className="col-12"><img src={nonProfit.imageURL} alt={nonProfit.name} style={{ height: 150, width: 150, marginLeft: 70}} /></div>
                       </div>
                   </div>
-                    <div className="col-8">
+                    <div className="col-md-8 col-sm-12">
                       <div className="row">
                         <div className="col-12">
                           <h1>{nonProfit.name}</h1>
@@ -65,12 +54,17 @@ function Table(props) {
                           {nonProfit.mission}
                           &nbsp;&nbsp;<a className="externalLink" href={nonProfit.contact.website} target="_blank" rel="noopener noreferrer">Visit website</a>
                           <br></br>
-                          <button type="button" className="btn btn-success shadow"
+                          <button type="button" className="btn btn-warning customBtn shadow"
+                            onClick={(event) => {
+                              event.preventDefault();
+                              addFavorite(nonProfit.name);
+                              }}><span className="fa fa-heart"></span>&nbsp;&nbsp;&nbsp;Add To Favorites</button>
+                          <button type="button" className="btn btn-success customBtn shadow"
                             onClick={(event) => {
                               event.preventDefault();
                               donateMoney(nonProfit.name);
                             }}><span className="fa fa-donate"></span>&nbsp;&nbsp;&nbsp;Donate money</button>
-                          <button type="button" className="btn btn-primary shadow"
+                          <button type="button" className="btn btn-primary customBtn shadow"
                             onClick={(event) => {
                               event.preventDefault();
                               volunteerTime(nonProfit.name);

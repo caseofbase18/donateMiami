@@ -43,3 +43,8 @@ input {
    color: #0000FF !important;
    text-decoration: underline;
 }
+
+.customBtn {
+   width: 220px !important;
+}
+
