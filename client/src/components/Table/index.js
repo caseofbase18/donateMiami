@@ -37,49 +37,45 @@ function Table(props) {
           nonProfits.map((nonProfit, index) => {
             return (
 
-              // make the entire cell of the table clickable, re-rendering the page with donate/volunteer form
-              <tr className= "tablerows" key={index}>
-                <div className="row">
-                  <td className="col-4">
-                    <div className="row">
-                      <div className="col-12"><img src={nonProfit.imageURL} alt={nonProfit.name} style={{ height: 150, width: 150, marginLeft: 70}} /></div>
-                    </div>
-                    <div className="row">
-                      <div style={{ paddingLeft: 75 }} className="col-12">
-                        <button type="button" className="btn btn-warning btn-sm shadow"
-                          onClick={(event) => {
-                            event.preventDefault();
-                            addFavorite(nonProfit.name);
-                            // undefined
-                          }}><span className="fa fa-heart"></span>&nbsp;&nbsp;&nbsp;Add To Favorites</button>
+              <tr key={index}>
+                <td>
+                  <div className="row">
+                    <div className="col-md-4 col-sm-12">
+                      <div className="row">
+                        <div className="col-12"><img src={nonProfit.imageURL} alt={nonProfit.name} style={{ height: 150, width: 150, marginLeft: 70}} /></div>
                       </div>
-                    </div>
-                  </td>
-                  <td className="col-8">
-                    <div className="row">
-                      <div className="col-12">
-                        <h1>{nonProfit.name}</h1>
+                  </div>
+                    <div className="col-md-8 col-sm-12">
+                      <div className="row">
+                        <div className="col-12">
+                          <h1>{nonProfit.name}</h1>
+                        </div>
                       </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-12">
-                        {nonProfit.mission}
+                      <div className="row">
+                        <div className="col-12">
+                          {nonProfit.mission}
                           &nbsp;&nbsp;<a className="externalLink" href={nonProfit.contact.website} target="_blank" rel="noopener noreferrer">Visit website</a>
-                        <br></br>
-                        <button type="button" className="btn btn-success shadow"
-                          onClick={(event) => {
-                            event.preventDefault();
-                            donateMoney(nonProfit.name);
-                          }}><span className="fa fa-donate"></span>&nbsp;&nbsp;&nbsp;Donate money</button>
-                        <button type="button" className="btn btn-primary shadow"
-                          onClick={(event) => {
-                            event.preventDefault();
-                            volunteerTime(nonProfit.name);
-                          }}><span className="fa fa-clock"></span>&nbsp;&nbsp;&nbsp;Volunteer time</button>
+                          <br></br>
+                          <button type="button" className="btn btn-warning customBtn shadow"
+                            onClick={(event) => {
+                              event.preventDefault();
+                              addFavorite(nonProfit.name);
+                              }}><span className="fa fa-heart"></span>&nbsp;&nbsp;&nbsp;Add To Favorites</button>
+                          <button type="button" className="btn btn-success customBtn shadow"
+                            onClick={(event) => {
+                              event.preventDefault();
+                              donateMoney(nonProfit.name);
+                            }}><span className="fa fa-donate"></span>&nbsp;&nbsp;&nbsp;Donate money</button>
+                          <button type="button" className="btn btn-primary customBtn shadow"
+                            onClick={(event) => {
+                              event.preventDefault();
+                              volunteerTime(nonProfit.name);
+                            }}><span className="fa fa-clock"></span>&nbsp;&nbsp;&nbsp;Volunteer time</button>
+                        </div>
                       </div>
                     </div>
-                  </td>
-                </div>
+                  </div>
+                </td>
               </tr>
             )
           })
