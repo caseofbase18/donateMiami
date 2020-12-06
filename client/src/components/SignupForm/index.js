@@ -1,36 +1,47 @@
 import React from 'react';
 
-// bootstrap
-function Volunteer() {
+
+function Signup() {
     return (
-        //logo
-        <body>
+        
+        <div>
             <form>
                 <div className="form-row">
                     <div className="form-group col-md-6">
-                        <label for="inputFirstName">First Name</label>
-                        <input type="text" className="form-control" placeholder="First Name"></input>
+                        <label htmlFor="inputEmail4">Email</label>
+                        <input type="email" className="form-control" id="inputEmail4" placeholder="email@address.com"></input>
                     </div>
 
                     <div className="form-group col-md-6">
-                        <label for="inputLastName">Last Name</label>
+                        <label htmlFor="inputPassword4">Password</label>
+                        <input type="password" className="form-control" id="inputPassword4" placeholder="New password"></input>
+                    </div>
+                </div>
+
+                <div className="form-row">
+                    <div className="form-group col-md-6">
+                        <label htmlFor="inputFirstName">First Name</label>
+                        <input type="text" className="form-control" placeholder="First Name"></input>
+                    </div>
+                    <div className="form-group col-md-6">
+                        <label htmlFor="inputLastName">Last Name</label>
                         <input type="text" className="form-control" placeholder="Last Name"></input>
                     </div>
                 </div>
 
                 <div className="form-group">
-                    <label for="inputAddress">Address</label>
+                    <label htmlFor="inputAddress">Address</label>
                     <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St Apt. B"></input>
                 </div>
 
                 <div className="form-row">
                     <div className="form-group col-md-6">
-                        <label for="inputCity">City</label>
+                        <label htmlFor="inputCity">City</label>
                         <input type="text" className="form-control" id="inputCity" placeholder="City"></input>
                     </div>
 
                     <div className="form-group col-md-4">
-                        <label for="inputState">State</label>
+                        <label htmlFor="inputState">State</label>
                         <select id="inputState" className="form-control">
                             <option selected>Choose...</option>
                             {/* <option value="" selected="selected">Select a State</option> */}
@@ -89,36 +100,21 @@ function Volunteer() {
                     </div>
 
                     <div className="form-group col-md-2">
-                        <label for="inputZip">Zip</label>
+                        <label htmlFor="inputZip">Zip</label>
                         <input type="text" className="form-control" id="inputZip" placeholder="12345"></input>
                     </div>
 
                     <div className="form-group">
-                        <label for="inputPhoneNumber">Phone Number</label>
+                        <label htmlFor="inputPhoneNumber">Phone Number</label>
                         <input type="text" className="form-control" id="inputPhoneNumber" placeholder="123-456-7890"></input>
-                    </div>
-
-                    <div className="form-group">
-                        <label for="inputOrganization">Name of Organization</label>
-                        <input type="text" className="form-control" id="inputOrganization" placeholder="e.g. United Way"></input>
-                    </div>
-
-                    <div className="form-group">
-                        <label for="inputHoursAvailable">Amount of Hours Available</label>
-                        <input type="text" className="form-control" id="inputHoursAvailable" placeholder="e.g. 3 hours"></input>
-                    </div>
-
-                    <div className="form-group">
-                        <label for="inputAvailableDates">Available Dates</label>
-                        <input type="text" className="form-control" id="inputAvailableDates" placeholder="e.g. 1/1/2021, 2/3/2021"></input>
                     </div>
                 </div>
 
-                <button type="submit" className="btn btn-primary">Submit Volunteer Availability!</button>
+                <button type="submit" className="btn btn-primary shadow">Submit!</button>
 
             </form>
-        </body>
+        </div>
     )
 }
 
-export default Volunteer;
+export default Signup;
