@@ -34,7 +34,7 @@ const VolunteerForm = () => {
                     <div className="form-group col-md-4">
                         <label htmlFor="inputOrganization">Name of Organization</label>
                         <select id="inputOrganization" className="form-control">
-                            <option selected>Select organization...</option>
+                            <option defaultValue>Select organization...</option>
                             <option value="Women">Women of Tomorrow</option>
                             <option value="Cat">Cat Network, Inc.</option>
                             <option value="Pelican">Pelican Harbor Seabird Station, Inc.</option>
