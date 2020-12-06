@@ -6,6 +6,8 @@ import Select from "../../components/Select";
 import Footer from "../../components/Footer";
 import Table from "../../components/Table";
 
+import "../../pages/style.css";
+
 const Dashboard = () => {
     return <div>
 

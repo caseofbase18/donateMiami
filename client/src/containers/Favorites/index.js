@@ -1,15 +1,23 @@
 import React from "react";
-import Table from "../components/Table";
+
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import FavoritesTable from "../../components/FavoritesTable";
 
 function Favorites() {
   return (
     <div>
+
+      <Header />
+
       <h1> Favorites Page </h1>
       <p>
         This page will contain a table of the orgainizations the user has selected as favorites.
       </p>
 
-      <Table />
+      <FavoritesTable />
+
+      <Footer />
 
     </div>
   );
