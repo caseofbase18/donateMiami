@@ -1,49 +1,90 @@
-import React from 'react';
+import React, {useState} from 'react';
+import axios from "axios";
 
 
 function Signup() {
+
+    const [ email, setEmail ] = useState("");
+    const [ password, setPassword ] = useState("");
+    const [ first, setFirst] = useState("");
+    const [ last, setLast ] = useState("");
+    const [ address, setAddress ] = useState("");
+    const [ city, setCity ] = useState("");
+    const [ stateInitials, setStateInitials ] = useState("");
+    const [ zip, setZip] = useState("");
+    const [ phone, setPhone ] = useState("");
+    
+
+
+    // function handleInputChange(event) {
+    //     const { name, value } = event.target;
+    //     console.log(name, value);
+    // };
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        console.log(email, password, first, last, address, city, stateInitials, zip, phone);
+        // axios.post("/api/account/")
+    }
+
+
     return (
-        
+
         <div>
             <form>
                 <div className="form-row">
                     <div className="form-group col-md-6">
                         <label htmlFor="inputEmail4">Email</label>
-                        <input type="email" className="form-control" id="inputEmail4" placeholder="email@address.com"></input>
+                        <input type="email" name="email" className="form-control" id="inputEmail4" placeholder="email@address.com"
+                            value={email}
+                            onChange={(event) => setEmail(event.target.value)}></input>
                     </div>
 
                     <div className="form-group col-md-6">
                         <label htmlFor="inputPassword4">Password</label>
-                        <input type="password" className="form-control" id="inputPassword4" placeholder="New password"></input>
+                        <input type="password" name="password" className="form-control" id="inputPassword4" placeholder="New password"
+                            value={password}
+                            onChange={(event) => setPassword(event.target.value)}></input>
                     </div>
                 </div>
 
                 <div className="form-row">
                     <div className="form-group col-md-6">
                         <label htmlFor="inputFirstName">First Name</label>
-                        <input type="text" className="form-control" placeholder="First Name"></input>
+                        <input type="text" name="first" className="form-control" placeholder="First Name"
+                            value={first}
+                            onChange={(event) => setFirst(event.target.value)}></input>
                     </div>
                     <div className="form-group col-md-6">
                         <label htmlFor="inputLastName">Last Name</label>
-                        <input type="text" className="form-control" placeholder="Last Name"></input>
+                        <input type="text" name="last" className="form-control" placeholder="Last Name"
+                            value={last}
+                            onChange={(event) => setLast(event.target.value)}></input>
                     </div>
                 </div>
 
                 <div className="form-group">
                     <label htmlFor="inputAddress">Address</label>
-                    <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St Apt. B"></input>
+                    <input type="text" name="address" className="form-control" id="inputAddress" placeholder="1234 Main St Apt. B"
+                        value={address}
+                        onChange={(event) => setAddress(event.target.value)}></input>
                 </div>
 
                 <div className="form-row">
                     <div className="form-group col-md-6">
                         <label htmlFor="inputCity">City</label>
-                        <input type="text" className="form-control" id="inputCity" placeholder="City"></input>
+                        <input type="text" name="city" className="form-control" id="inputCity" placeholder="City"
+                            value={city}
+                            onChange={(event) => setCity(event.target.value)}></input>
                     </div>
 
                     <div className="form-group col-md-4">
                         <label htmlFor="inputState">State</label>
-                        <select id="inputState" className="form-control">
-                            <option selected>Choose...</option>
+                        <select id="inputState" name="stateInitials" className="form-control"
+
+                            
+                            onChange={(event) => setStateInitials(event.target.value)}>
+                            <option defaultValue>Choose...</option>
                             {/* <option value="" selected="selected">Select a State</option> */}
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
@@ -101,16 +142,20 @@ function Signup() {
 
                     <div className="form-group col-md-2">
                         <label htmlFor="inputZip">Zip</label>
-                        <input type="text" className="form-control" id="inputZip" placeholder="12345"></input>
+                        <input type="text" name="zip" className="form-control" id="inputZip" placeholder="12345"
+                            value={zip}
+                            onChange={(event) => setZip(event.target.value)}></input>
                     </div>
 
                     <div className="form-group">
                         <label htmlFor="inputPhoneNumber">Phone Number</label>
-                        <input type="text" className="form-control" id="inputPhoneNumber" placeholder="123-456-7890"></input>
+                        <input type="text" name="phone" className="form-control" id="inputPhoneNumber" placeholder="123-456-7890"
+                            value={phone}
+                            onChange={(event) => setPhone(event.target.value)}></input>
                     </div>
                 </div>
 
-                <button type="submit" className="btn btn-primary shadow">Submit!</button>
+                <button onClick={handleSubmit} className="btn btn-primary shadow">Submit!</button>
 
             </form>
         </div>
