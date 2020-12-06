@@ -16,10 +16,14 @@ const PrivateRoutes = () => {
 
     return <Router>
         <Switch>
-            {/* <Route exact={true} path="/dashboard" component={Dashboard} /> */}
-            
+            <Route exact={true} path="/dashboard" component={Dashboard} />
+            <Route exact={true} path="/donate" component={Donate} />
+            <Route exact={true} path="/volunteer" component={Volunteer} />
+            <Route exact={true} path="/history" component={History} />
+            <Route exact={true} path="/favorites" component={Favorites} />
             <Route exact={true} path="/home" component={HomePage} />
             <Redirect to="/dashboard" />
+            
         </Switch>
     </Router>
 }
