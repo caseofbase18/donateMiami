@@ -45,7 +45,7 @@ const DonateForm = () => {
                     </div>
                 </div>
 
-                <button type="submit" className="btn btn-success shadow">Submit Donation!</button>
+                <button type="submit" className="btn btn-success shadow" id= "donbutton">Submit Donation!</button>
 
             </form>
 

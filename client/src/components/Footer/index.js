@@ -4,8 +4,8 @@ import './style.css';
 // bootstrap
 const Footer = () => {
   return (
-    <MDBFooter color="blue" className="font-small pt-4 mt-4" className="footer">
-      <MDBContainer fluid className="text-center text-md-left">
+    <MDBFooter color="blue" className="font-small pt-4 mt-4" className="footer" id="color">
+      <MDBContainer fluid className="text-center text-md-left" className="color">
         <MDBRow>
           <MDBCol md="6">
             <h5 className="title">Thank you!</h5>

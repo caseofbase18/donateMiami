@@ -1,6 +1,8 @@
 .footer {
     border-radius: 5px;
     padding-top: 10px;
+    font-weight: bold !important;
+    background: #00b3e6 !important;
 }
 
 .pic{
@@ -10,3 +12,14 @@
     margin-right: 5px;
     margin-bottom: 5px;
 }
+
+h5 {
+    font-weight: bold !important; 
+}
+
+#color {
+    background-color: #00b3e6 !important;
+}
+
+
+
