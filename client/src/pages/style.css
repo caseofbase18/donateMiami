@@ -20,6 +20,13 @@ background-size: cover;
 /* Set a background color that will be displayed
    while the background image is loading */
 background-color: white;
+
+}
+
+@media only screen and (max-width: 1024px) {
+   body {
+     background: none;
+    }
 }
 
 input {
@@ -36,10 +43,7 @@ input {
 
 .table {
    background-color: #faf5a6;
-   border-radius: 5px; 
-   border-spacing: 10px;
-   margin-bottom: 20px;
-   
+   border-radius: 10px; 
 }
 
 .externalLink {
@@ -48,16 +52,37 @@ input {
 }
 
 button {
-   border-radius: 5px;
+   border-radius: 10px !important;
+   font-weight: bold !important;
 }
-
-table {
-   margin-bottom: 5px;
-}
-
-
 
 .customBtn {
    width: 220px !important;
 }
 
+#favbutton {
+   background-color: #f5941c !important;
+   opacity: 65%;
+}
+
+#donbutton {
+   background-color: #a6cc38 !important;
+   /* opacity: 75%; */
+}
+
+#volbutton {
+   background-color: #00b3e6 !important;
+   /* opacity: 85%; */
+   /* font: bold !important; */
+}
+
+#delfavbutton {
+   background-color: #eb008b !important;
+   opacity: 65%;
+}
+
+#logo {
+   border-radius: 5px;
+   border: 1px solid black;
+   margin-top: 10px;
+}
