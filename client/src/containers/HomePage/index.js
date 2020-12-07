@@ -18,6 +18,8 @@ const HomePage = () => {
 
         to make a donation to a local charity.</p>
 
+        <Link to="/dashboard">Go to Dashboard</Link>
+
         <Footer />
     </div>
 }

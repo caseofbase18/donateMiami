@@ -15,6 +15,7 @@ const LoginForm = (props) => {
                 const response = await API.logIn(email, password);
                 props.onLogIn(response.data);
             } catch (error) {
+                console.log(error);
                 alert("Invalid credentials!");
             }
         }

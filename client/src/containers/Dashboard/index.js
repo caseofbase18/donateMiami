@@ -15,7 +15,7 @@ const Dashboard = () => {
 
         <NavTabs />
 
-        <h1>Home Page</h1>
+        <h1>Dashboard</h1>
         <h2>Welcome to Donate Miami!</h2>
 
         <Select />
