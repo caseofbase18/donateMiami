@@ -24,7 +24,7 @@ function Signup() {
     function handleSubmit(event) {
         event.preventDefault();
         console.log(email, password, first, last, address, city, stateInitials, zip, phone);
-        axios.post("/api/account/", {
+        axios.post("/api/account", {
             email: email,
             password: password,
             firstName: first,
