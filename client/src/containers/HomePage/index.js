@@ -9,10 +9,10 @@ const HomePage = () => {
 
         <Header />
 
-        <h2>Welcome to Donate Miami!</h2>
+        <h2 id="hometitle">Welcome to Donate Miami!</h2>
 
-        <p>
-        <Link to="/login">Login </Link> or     
+        <p id="homepage">
+        <Link to="/login">Login</Link> or     
         
         <Link to="/signup"> Sign up </Link>
 

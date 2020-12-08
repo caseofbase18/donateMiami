@@ -14,13 +14,15 @@ const Dashboard = () => {
         <Header />
 
         <NavTabs />
+        <br></br>
 
-        <h1>Dashboard</h1>
-        <h2>Welcome to Donate Miami!</h2>
+        {/* <h1>Home Page</h1> */}
+        <h1>Welcome to Donate Miami!</h1>
 
         <Select />
-
-        <p>Use the buttons below to make a donation of your time or money to a local non-profit charity.</p>
+        <br></br>
+        
+        <p id="usebtns">Use the buttons below to make a donation of your time or money to a local non-profit charity.</p>
 
         <Table />
 

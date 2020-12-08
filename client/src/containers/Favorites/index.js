@@ -10,8 +10,8 @@ function Favorites() {
 
       <Header />
 
-      <h1> Favorites Page </h1>
-      <p>
+      <h2 id="favtitle"> Favorites Page </h2>
+      <p id="favpage">
         This page will contain a table of the orgainizations the user has selected as favorites.
       </p>
 

@@ -20,9 +20,9 @@ const DonateForm = () => {
 
         <div>
 
-            <h1>Donate Form</h1>
-            <p>Select an organization and fill in the amount of your financial contribution.</p>
-
+            <h1 id="donatetitle">Donate Form</h1>
+            <p id="selectdonate">Select an organization and fill in the amount of your financial contribution.</p>
+            
             <form>
 
                 <div className="form-row">
