@@ -25,8 +25,8 @@ const VolunteerForm = () => {
 
         <div>
 
-            <h1>Volunteer Form</h1>
-            <p>Select an organization, how may hours you would like to contribute, and the date of your availability.</p>
+            <h1 id="volform">Volunteer Form</h1>
+            <p id="select">Select an organization, how may hours you would like to contribute, and the date of your availability.</p>
 
             <form>
                            
@@ -65,7 +65,7 @@ const VolunteerForm = () => {
                     </div>
 
                     <div className="form-group">
-                        <div className="form-group col-md-6">
+                        <div className="form-group col-md-6" id="calendar">
 
                             <br></br>
 
@@ -79,7 +79,7 @@ const VolunteerForm = () => {
 
                 </div>
 
-                <button type="submit" className="btn btn-primary shadow" id="volbutton">Submit Volunteer Availability!</button>
+                <button type="submit" className="btn btn-primary shadow" id="donbutton">Submit Volunteer Availability!</button>
 
             </form>
             <br></br>
