@@ -6,9 +6,16 @@ module.exports = {
   
   register: function(req, res) {
     db.User.create({
-        name:req.body.name,
         email:req.body.email.toLowerCase(),
-        password:md5(req.body.password)
+        password:md5(req.body.password),
+        firstName:req.body.firstName.toLowerCase(),
+        lastName:req.body.lastName.toLowerCase(),
+        address:req.body.address.toLowerCase(),
+        city:req.body.city.toLowerCase(),
+        state:req.body.state.toLowerCase(),
+        zip:req.body.zip,
+        phone:req.body.phone
+
     })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(409).json(err));
