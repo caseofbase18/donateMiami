@@ -33,6 +33,9 @@ if (process.env.NODE_ENV === "production") {
 // Connect to the Mongo DB
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/donateMiami";
 
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 mongoose.connect(MONGODB_URI, {
   useUnifiedTopology: true,
   useNewUrlParser: true
