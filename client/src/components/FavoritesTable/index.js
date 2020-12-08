@@ -48,11 +48,11 @@ function Table(props) {
                     <div className="col-md-8 col-sm-12">
                       <div className="row">
                         <div className="col-12">
-                          <h1>{nonProfit.name}</h1>
+                          <h2>{nonProfit.name}</h2>
                         </div>
                       </div>
                       <div className="row">
-                        <div className="col-12">
+                        <div className="col-12" id="parafont">
                           {nonProfit.mission}
                           &nbsp;&nbsp;<a className="externalLink" href={nonProfit.contact.website} target="_blank" rel="noopener noreferrer">Visit website</a>
                           <br></br>

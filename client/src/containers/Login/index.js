@@ -9,7 +9,7 @@ const LoginPage=()=>{
     const [state,dispatch]=useStoreContext();
     return <div>
         <Header />
-        <h1>LogIn Page</h1>
+        <h1 id="logintitle">Login Page</h1>
 
             <LoginForm onLogIn={(account)=>{
                 localStorage.setItem("authorization-token",account.token);

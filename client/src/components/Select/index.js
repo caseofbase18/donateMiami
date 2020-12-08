@@ -18,14 +18,14 @@ function Select() {
 
   return (
     <div>
-      <p>
-        Select a category to see a list of non-profit organizations by type.
+      <p id= "select">
+        Select a category below to see a list of non-profit organizations by type.
       </p>
 
       <form>
         <div className="form-row">
           <div className="form-group col-md-4">
-            <label htmlFor="inputCategory">Category</label>
+            <label htmlFor="inputCategory"></label>
             <select id="inputCategory" className="form-control"
               onChange={handleInputChange}>              
               {
