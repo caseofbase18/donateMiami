@@ -1,21 +1,33 @@
-import React from 'react';
-import nonProfits from "../../nonProfitSeed.json";
+import React, { useState, useEffect } from 'react';
 import "../../pages/style.css";
-import "./style.css";
+import API from "../../utils/API";
 
 
-function Table(props) {
+function FavoritesTable(props) {
 
-  // functions that need to be handled by the table component:
+  // Setting our component's initial state
+  const [nonProfits, setNonProfits] = useState([]);
 
-  // 1. When the favorites button is clicked, get the id of the nonProfit 
-  // and add the nonProfit to the list of favorites
+  // When component mounts, load non Profits from db
+  useEffect(() => {
+    loadNonProfits()
+  }, [])
 
-  function addFavorite(nonProfit) {
-    console.log(nonProfit)
+  // Loads all books and sets them to books
+  function loadNonProfits() {
+    API.getNonProfits()
+      .then(res =>
+        setNonProfits(res.data)
+      )
+      .catch(err => console.log(err));
+  };
+
+
+
+
+  function deleteFavorite(id) {
+    console.log("DELETE" + id)
   }
-
-  // 2. When the view website link is clicked, open the nonProfit's website in a new tab
 
   function donateMoney(nonProfit) {
     console.log(nonProfit)
@@ -25,19 +37,15 @@ function Table(props) {
     console.log(nonProfit)
   }
 
-
-
-
-
   return (
     <table className="table table-hover ">
 
       <tbody className="container">
         {
-          nonProfits.map((nonProfit, index) => {
+          nonProfits.map((nonProfit) => {
             return (
 
-              <tr key={index}>
+              <tr key={nonProfit._id}>
                 <td>
                   <div className="row">
                     <div className="col-md-4 col-sm-12">
@@ -59,17 +67,17 @@ function Table(props) {
                           <button type="button" className="btn btn-danger customBtn shadow" id="delfavbutton"
                             onClick={(event) => {
                               event.preventDefault();
-                              addFavorite(nonProfit.name);
+                              deleteFavorite(nonProfit._id);
                               }}><span className="fa fa-trash"></span>&nbsp;&nbsp;&nbsp;Delete Favorite</button>
                           <button type="button" className="btn btn-success customBtn shadow" id="donbutton"
                             onClick={(event) => {
                               event.preventDefault();
-                              donateMoney(nonProfit.name);
+                              donateMoney(nonProfit.name + nonProfit._id);
                             }}><span className="fa fa-donate"></span>&nbsp;&nbsp;&nbsp;Donate money</button>
                           <button type="button" className="btn btn-primary customBtn shadow" id="volbutton"
                             onClick={(event) => {
                               event.preventDefault();
-                              volunteerTime(nonProfit.name);
+                              volunteerTime(nonProfit.name + nonProfit._id);
                             }}><span className="fa fa-clock"></span>&nbsp;&nbsp;&nbsp;Volunteer time</button>
                         </div>
                       </div>
@@ -91,4 +99,4 @@ function Table(props) {
   )
 }
 
-export default Table;
+export default FavoritesTable;

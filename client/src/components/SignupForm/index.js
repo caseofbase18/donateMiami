@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from "axios";
+import API from '../../utils/API';
 
 
 function Signup() {
@@ -24,7 +25,7 @@ function Signup() {
     function handleSubmit(event) {
         event.preventDefault();
         console.log(email, password, first, last, address, city, stateInitials, zip, phone);
-        axios.post("/api/account", {
+        API.signUp({   
             email: email,
             password: password,
             firstName: first,
@@ -35,7 +36,10 @@ function Signup() {
             zip: zip,
             phone: phone
         })
-    }
+        .then(res => console.log(res.data))
+        .catch(err => console.log(err));
+        alert(first + " " + last + " account created successfully!")
+    };
 
 
     return (

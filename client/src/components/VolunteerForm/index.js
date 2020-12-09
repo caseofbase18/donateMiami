@@ -1,32 +1,38 @@
 import React, { useState } from 'react';
+import API from "../../utils/API";
 
 import Calendar from 'react-calendar';
-
-// function MyApp() {
-//   const [value, onChange] = useState(new Date());
-
-//   return (
-//     <div>
-//       <Calendar
-//         onChange={onChange}
-//         value={value}
-//       />
-//     </div>
-//   );
-// }
 
 const VolunteerForm = () => {
        
     const [organization, setOrganization] = useState("");
     const [amount, setAmount] = useState("");
-    const [value, onChange] = useState(new Date());
+    const [date, onChange] = useState(new Date());
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(organization, amount, value);
-        // axios.post("/api/transaction/", {organization, amount, value});
+        console.log(organization, amount, date);
+        // axios.post("/api/time/", {organization, amount, value});
+        if (organization === "Select organization...") {
+            alert("Please select an organization")
+        } else if (amount === 0) {
+            alert("Please enter a dollar amount")
+
+        } else if (date < (Date.now)) {
+            alert("Please select a date in the future")
+
+        } else {
+            API.saveTime({
+                name: organization,
+                value: amount,
+                date: date,
+                // user: userRef
+            })
+            .then(res => console.log(res.data))
+            .catch(err => console.log(err));
+            alert("Thank you for your interest in" + organization + "!")
     }
-    
+};    
 
     return (
 
@@ -81,7 +87,8 @@ const VolunteerForm = () => {
 
                             <Calendar
                                 onChange={onChange}
-                                value={value}
+                                value={date}
+                                // selectRange={true}
                             />
                         </div>
 

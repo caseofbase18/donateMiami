@@ -8,10 +8,6 @@ import Volunteer from '../containers/Volunteer';
 import History from '../containers/History';
 import Favorites from '../containers/Favorites';
 
-
-
-
-
 const PrivateRoutes = () => {
 
     return <Router>
@@ -22,6 +18,7 @@ const PrivateRoutes = () => {
             <Route exact={true} path="/history" component={History} />
             <Route exact={true} path="/favorites" component={Favorites} />
             <Route exact={true} path="/home" component={HomePage} />
+            
             <Redirect to="/dashboard" />
             
         </Switch>

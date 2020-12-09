@@ -12,13 +12,12 @@ const HomePage = () => {
         <h2 id="hometitle">Welcome to Donate Miami!</h2>
 
         <p id="homepage">
+            
         <Link to="/login">Login</Link> or     
         
         <Link to="/signup"> Sign up </Link>
 
         to make a donation to a local charity.</p>
-
-        <Link to="/dashboard">Go to Dashboard</Link>
 
         <Footer />
     </div>

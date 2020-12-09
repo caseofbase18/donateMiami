@@ -18,13 +18,15 @@ module.exports = {
         db.Time
         .create(req.body)
         .then(dbModel => res.json(dbModel))
-        .catch(err = res.status(422).json(err));
+        // .catch(err = res.status(422).json(err));
+        .catch(err => res.status(422).json(err));
     },
     remove: function (req, res) {
         db.Time
         .findById({id: req.params.id})
         .then(dbModel => dbModel.deleteOne())
-        .then(dbModel = res.json(dbModel))
+        // .then(dbModel = res.json(dbModel))
+        .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     }
 };

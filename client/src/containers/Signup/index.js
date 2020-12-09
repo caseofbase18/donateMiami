@@ -12,15 +12,7 @@ const SignupPage=()=>{
         <Header />
         <h1>Sign Up Page</h1>
 
-            <SignupForm 
-            //     onLogIn={(account)=>{
-            //     localStorage.setItem("authorization-token",account.token);
-            //     dispatch({
-            //         type:LOG_IN,
-            //         payload:account
-            //     })
-            // }} 
-            />
+            <SignupForm />
     </div>
 }
 export default SignupPage;

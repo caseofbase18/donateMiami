@@ -14,7 +14,8 @@ function History(props) {
       <h2 id="histitle">History Page</h2>
       <p id="hispage">
         This page will contain a line graph of user's donations year-to-date.
-
+      </p>
+      <p id="hispage">
         It will also contain a line graph of user's volunteer hours year-to-date, if applicable.
       </p>
 
