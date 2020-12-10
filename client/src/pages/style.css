@@ -72,10 +72,16 @@ button {
 
 #donbutton {
    background-color: #a6cc38 !important;
+   border-radius: 10px !important;
+   font-weight: bold !important;
+   display: inline-block;
+   margin-right: 6px;
    /* opacity: 75%; */
 }
 
 #volbutton {
+   border-radius: 10px !important;
+   font-weight: bold !important;
    background-color: #00b3e6 !important;
    /* opacity: 85%; */
    /* font: bold !important; */

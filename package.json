@@ -27,6 +27,7 @@
     "if-env": "^1.0.4",
     "md5": "^2.3.0",
     "mdbreact": "^5.0.0",
+    "moment": "^2.29.1",
     "mongo-seeding": "^3.5.0",
     "mongoose": "^5.11.4",
     "passport": "^0.4.1",
