@@ -52,6 +52,13 @@ function History(props) {
     <div>
 
       <Header />
+      <div class="row">
+        <div class="col-6">
+          <h2 id="histitle">History Page</h2>
+        </div>
+        <div class="col-6"></div>
+      </div>
+
 
       <h2 id="histitle">History Page</h2>
 
