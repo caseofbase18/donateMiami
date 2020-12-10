@@ -40,11 +40,8 @@ const nonProfitSchema = new Schema ({
     },
     imageURL:{
         type: String,
-    },
-    favorites: [{
-        type: mongoose.SchemaTypes.ObjectId,
-        ref: "NonProfit",
-    }]
+    }
+
 
 });
 

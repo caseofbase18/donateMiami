@@ -18,6 +18,7 @@ function Table(props) {
     API.getNonProfits()
       .then(res =>
         setNonProfits(res.data)
+        // console.log(res.data)
       )
       .catch(err => console.log(err));
   };
@@ -25,9 +26,13 @@ function Table(props) {
   // 1. When the favorites button is clicked, get the id of the nonProfit 
   // and add the nonProfit to the list of favorites
 
-  function addFavorite(id) {
+  function newFavorite(id) {
     console.log(id);
-    // API.addFavorite(id)
+    API.addFavorite(id)
+    .then(res =>
+      console.log(res.data)
+    )
+    .catch(err => console.log(err));
   }
 
   // function donateMoney(nonProfit) {
@@ -68,7 +73,7 @@ function Table(props) {
                           <button type="button" className="btn btn-warning customBtn shadow" id="favbutton"
                             onClick={(event) => {
                               event.preventDefault();
-                              addFavorite(nonProfit._id);
+                              newFavorite(nonProfit._id);
                             }}><span className="fa fa-heart"></span>&nbsp;&nbsp;&nbsp;Add To Favorites</button>
 
                           {/* <span><a className="btn btn-success customBtn shadow" href={'/donate?npid=' + nonProfit._id} rel="noopener noreferrer" id="favbutton">FAVORITE</a></span> */}
