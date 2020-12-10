@@ -10,11 +10,11 @@ function Favorites() {
 
       <Header />
 
-      <div class="row">
-        <div class="col-6">
+      <div className="row">
+        <div className="col-6">
           <h2 id="favtitle"> Favorites Page </h2>
         </div>
-        <div class="col-6"></div>
+        <div className="col-6"></div>
       </div>
 
       <p id="favpage">

@@ -45,6 +45,6 @@ const nonProfitSchema = new Schema ({
 
 });
 
-const NonProfit  = mongoose.model("NonProfit", nonProfitSchema);
+const NonProfit  = mongoose.model("NonProfit", nonProfitSchema, "NonProfits");
 
 module.exports = NonProfit;
