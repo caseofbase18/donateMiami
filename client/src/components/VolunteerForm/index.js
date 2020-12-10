@@ -37,7 +37,7 @@ const VolunteerForm = () => {
         <div>
 
             <h1 id="volform">Volunteer Form</h1>
-            <p id="select">Select an organization, how may hours you would like to contribute, and the date of your availability.</p>
+            <p id="volparagraph">Select an organization, how may hours you would like to contribute, and the date of your availability.</p>
 
             <form>
                            

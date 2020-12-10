@@ -40,6 +40,16 @@ function NavTabs(props) {
         </NavLink>
       </li>
 
+      <li className="nav-item">
+        <NavLink
+          to="/logout"
+          onClick={() => props.handlePageChange("Logout")}
+          activeClassName="nav-link active"
+          className={"nav-link"}>
+          Logout
+        </NavLink>
+      </li>
+
     </ul>
   );
 }

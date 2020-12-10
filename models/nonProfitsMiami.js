@@ -40,14 +40,10 @@ const nonProfitSchema = new Schema ({
     },
     imageURL:{
         type: String,
-    },
-    favorites: [{
-        type: mongoose.SchemaTypes.ObjectId,
-        ref: "NonProfit",
-    }]
+    }
 
 });
 
-const NonProfit  = mongoose.model("NonProfit", nonProfitSchema);
+const NonProfit  = mongoose.model("NonProfit", nonProfitSchema, "NonProfits");
 
 module.exports = NonProfit;

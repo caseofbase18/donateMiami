@@ -18,14 +18,14 @@ function Select() {
 
   return (
     <div>
-      <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
+      <div className="row">
+        <div className="col-2"></div>
+        <div className="col-8">
           <p id="select">
             Select an option below to view our non-profit organizations by category...
           </p>
         </div>
-        <div class="col-2"></div>
+        <div className="col-2"></div>
       </div>
 
       <form>

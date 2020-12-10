@@ -13,16 +13,16 @@ const Dashboard = () => {
 
         {/* <Header /> */}
 
-        {/* <NavTabs /> */}
+        <NavTabs />
         <br></br>
 
         {/* <h1>Home Page</h1> */}
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8">
+        <div className="row">
+            <div className="col-2"></div>
+            <div className="col-8">
                 <h1 id="dashtitle">Welcome to Donate Miami!</h1>
             </div>
-            <div class="col-2"></div>
+            <div className="col-2"></div>
         </div>
         <br></br>
 

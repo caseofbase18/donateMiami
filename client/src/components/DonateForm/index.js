@@ -29,23 +29,19 @@ const DonateForm = () => {
     return (
 
         <div>
-            <div class="row">
-                <div class="col-5">
+            <div className="row">
+                <div className="col-5">
                     <h2 id="donatetitle">Donate Form</h2>
                 </div>
-                <div class="col-7"></div>
+                <div className="col-7"></div>
             </div>
-            <div class="row">
-                <div class="col-8">
+            <div className="row">
+                <div className="col-8">
                     <p id="selectdonate">Select an organization and fill in the amount of your financial contribution.</p>
                 </div>
-                <div class="col-4"></div>
+                <div className="col-4"></div>
 
             </div>
-
-
-            <h1 id="donatetitle">Donate Form</h1>
-            <p id="selectdonate">Select an organization and fill in the amount of your financial contribution.</p>
 
             <form>
 
