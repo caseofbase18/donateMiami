@@ -1,6 +1,5 @@
+/* background image */
 body {
-/* color gradient */
-/* background-image: linear-gradient(to bottom, #bd198c, #e02469, #ee4d46, #e87823, #d49f01, #b0b41c, #86c447, #4fd075, #00cda1, #00c8c5, #00bfdd, #00b3e6); */
 background-image: url(./6464940-35a.png);
 
 /* Background image is centered vertically and horizontally at all times */
@@ -20,15 +19,16 @@ background-size: cover;
 /* Set a background color that will be displayed
    while the background image is loading */
 background-color: white;
-
 }
 
+/* no background image on small screens */
 @media only screen and (max-width: 1024px) {
    body {
      background: none;
     }
 }
 
+/* adds shadow to inputs */
 input {
    box-shadow: 5px 5px lightgrey;
 }
@@ -41,11 +41,13 @@ input {
    box-shadow: 5px 5px lightgrey;
 }
 
+/* centers input category on dashboard */
 #inputCategory {
    box-shadow: 5px 5px lightgrey;
    text-align: center;
 }
 
+/* formats table */
 .table {
    background-color: #faf5a6;
    border-radius: 10px; 
@@ -56,6 +58,7 @@ input {
    text-decoration: underline;
 }
 
+/* button formatting */
 button {
    border-radius: 10px !important;
    font-weight: bold !important;
@@ -92,6 +95,7 @@ button {
    opacity: 65%;
 }
 
+/* formats logo image for non-profits */
 #logo {
    border-radius: 5px;
    border: 1px solid black;
@@ -101,6 +105,7 @@ button {
 
 @import url('https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,500;1,400&display=swap');
 
+/* title for dashboard */
 #dashtitle {
    font-family: 'Proza Libre', sans-serif;
    /* background-color: #a6cc38; */
@@ -111,8 +116,17 @@ button {
    font-weight: bold;
 }
 
+/* titles for organizations */
 h2 {
    font-family: 'Proza Libre', sans-serif;
+}
+
+/* formats text for history page */
+#donvolhistory {
+   font-family: 'Proza Libre', sans-serif;
+   color: #029A30;
+   font-weight: bold;
+   text-decoration: underline;
 }
 
 #parafont {
@@ -120,16 +134,16 @@ h2 {
    font-size: larger;
 }
 
+/* formats text for all paragraphs */
 p {
    font-family: 'Proza Libre', sans-serif;
    font-size: larger;
 }
 
+/* formats text for labels */
 label {
    font-family: 'Proza Libre', sans-serif;
    font-size: larger;
-   /* background-color: #a6cc38; */
-   /* margin-right: 125px; */
    padding-left: 10px;
    padding-right: 10px;
    border-radius: 5px;
@@ -137,9 +151,9 @@ label {
    font-weight: bold;
 }
 
+/* formats text for select component */
 #select {
    font-family: 'Proza Libre', sans-serif;
-   /* background-color: #a6cc38; */
    border-radius: 5px;
    text-align: center;
    margin: 10px 10px 10px 10px;
@@ -156,42 +170,46 @@ label {
    font-weight: bold;
 }
 
+/* formats text for volunteer form */
 #volform {
-   /* background-color: #a6cc38; */
-   /* margin-right: 812px; */
-   padding-left: 15px;
    border-radius: 5px;
    color: #029A30;
    font-weight: bold;
 }
 
+/*  */
+#volparagraph {
+   color: #029A30;
+   font-weight: bold;
+}
+
+
 #selectdonate {
-   /* background-color: #a6cc38; */
-   /* margin-right: 465px; */
    border-radius: 5px;
    color: #029A30;
    font-weight: bold;
    
 }
 
+/* formats text for Donation page title */
 #donatetitle {
    font-family: 'Proza Libre', sans-serif;
-   /* background-color: #a6cc38; */
    border-radius: 5px;
    margin: 10px 0px 10px 0px;
    color: #029A30;
    font-weight: bold;
 }
 
+/* calendar formatting */
 #calendar {
    background-color: #f5941c;
    padding-bottom: 25px;
    border-radius: 5px;
 }
 
+/* formats text for Favorites title */
 #favtitle {
    font-family: 'Proza Libre', sans-serif;
-   /* background-color: #a6cc38; */
    border-radius: 5px;
    margin: 10px 0px 10px 0px;
    color: #029A30;
@@ -199,46 +217,38 @@ label {
 }
 
 #favpage {
-   /* background-color: #a6cc38; */
-   /* margin-right: 375px; */
    padding-left: 5px;
    border-radius: 5px;
    color: #029A30;
    font-weight: bold;
 }
 
+/* formats text for history title */
 #histitle {
    font-family: 'Proza Libre', sans-serif;
-   /* background-color: #a6cc38; */
-   /* margin-right: 900px; */
-   padding-left: 15px;
    border-radius: 5px;
    color: #029A30;
    font-weight: bold;
 }
 
 #hispage {
-   /* background-color: #a6cc38; */
-   /* margin-right: 375px; */
-   padding-left: 15px;
    border-radius: 5px;
    color: #029A30;
    font-weight: bold;
 }
 
+/* formats text for login title */
 #logintitle {
    font-family: 'Proza Libre', sans-serif;
-   /* background-color: #a6cc38; */
    border-radius: 5px;
    margin: 10px 0px 10px 0px;
    color: #029A30;
    font-weight: bold;
 }
 
+/* formats title for homepage */
 #hometitle {
    font-family: 'Proza Libre', sans-serif;
-   /* background-color: #a6cc38; */
-   /* margin-right: 700px; */
    padding-left: 15px;
    border-radius: 5px;
    color: #029A30;
@@ -246,14 +256,13 @@ label {
 }
 
 #homepage {
-   /* background-color: #a6cc38; */
-   /* margin-right: 635px; */
    padding-left: 15px;
    border-radius: 5px;
    color: #029A30;
    font-weight: bold;
 }
 
+/* formats navlinks */
 .nav-link {
    font-family: 'Proza Libre', sans-serif;
    font-weight: bold;

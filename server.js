@@ -40,6 +40,7 @@ mongoose.connect(MONGODB_URI, {
   useUnifiedTopology: true,
   useNewUrlParser: true
 });
+console.log(MONGODB_URI)
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

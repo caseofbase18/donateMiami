@@ -52,28 +52,27 @@ function History(props) {
     <div>
 
       <Header />
-      <div class="row">
-        <div class="col-6">
+      <div className="row">
+        <div className="col-6">
           <h2 id="histitle">History Page</h2>
         </div>
-        <div class="col-6"></div>
+        <div className="col-6"></div>
       </div>
 
-
-      <h2 id="histitle">History Page</h2>
-
       <p id="hispage">
-        This page will contain a line graph of user's donations year-to-date.
+        Here is your donation and volunteer history.
       </p>
-      <button onClick={donateHistory} className="btn btn-success shadow" id="donbutton">Donation History</button>
+
+      <h3 id="donvolhistory">Donation History</h3>
+      {/* <button onClick={donateHistory} classNameName="btn btn-success shadow" id="donbutton">Donation History</button> */}
 
       <DonationHistory />
 
-      <p id="hispage">
+      {/* <p id="hispage">
         It will also contain a line graph of user's volunteer hours year-to-date, if applicable.
-      </p>
-      <button onClick={volunteerHistory} className="btn btn-primary shadow" id="volbutton">Volunteer History</button>
-
+      </p> */}
+      {/* <button onClick={volunteerHistory} classNameName="btn btn-primary shadow" id="volbutton">Volunteer History</button> */}
+      <h3 id="donvolhistory">Volunteer History</h3>
       <VolunteerHistory />
 
       <Footer />

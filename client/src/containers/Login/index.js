@@ -9,11 +9,11 @@ const LoginPage=()=>{
     const [state,dispatch]=useStoreContext();
     return <div>
         <Header />
-        <div class="row">
-            <div class="col-4">
+        <div className="row">
+            <div className="col-4">
             <h2 id="logintitle">Login Page</h2>
             </div>
-            <div class="col-8"></div>
+            <div className="col-8"></div>
        
         </div>
         
