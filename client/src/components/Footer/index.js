@@ -10,7 +10,7 @@ const Footer = () => {
           <MDBCol md="6">
             <h5 className="title">Thank you!</h5>
             <p>
-            We hope that Donate Miami has helped you choose how you would like to support our local communities.
+            We hope that Donate Miami has helped you choose how you would like to support our local communities. &hearts;
             </p>
           </MDBCol>
           <MDBCol md="6">

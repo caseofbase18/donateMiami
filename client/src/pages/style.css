@@ -1,7 +1,7 @@
 body {
 /* color gradient */
 /* background-image: linear-gradient(to bottom, #bd198c, #e02469, #ee4d46, #e87823, #d49f01, #b0b41c, #86c447, #4fd075, #00cda1, #00c8c5, #00bfdd, #00b3e6); */
-background-image: url(./6464940-35.png);
+background-image: url(./6464940-35a.png);
 
 /* Background image is centered vertically and horizontally at all times */
 background-position: center center;
@@ -43,6 +43,7 @@ input {
 
 #inputCategory {
    box-shadow: 5px 5px lightgrey;
+   text-align: center;
 }
 
 .table {
@@ -71,10 +72,16 @@ button {
 
 #donbutton {
    background-color: #a6cc38 !important;
+   border-radius: 10px !important;
+   font-weight: bold !important;
+   display: inline-block;
+   margin-right: 6px;
    /* opacity: 75%; */
 }
 
 #volbutton {
+   border-radius: 10px !important;
+   font-weight: bold !important;
    background-color: #00b3e6 !important;
    /* opacity: 85%; */
    /* font: bold !important; */
@@ -92,72 +99,88 @@ button {
    
 }
 
-h1 {
-   font-family: 'Roboto', sans-serif;
-   background-color: #a6cc38;
-   /* margin-right: 610px; */
-   padding-left: 15px;
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,500;1,400&display=swap');
+
+#dashtitle {
+   font-family: 'Proza Libre', sans-serif;
+   /* background-color: #a6cc38; */
    border-radius: 5px;
+   text-align: center;
+   margin: 10px 10px 10px 10px;
+   color: #029A30;
+   font-weight: bold;
 }
 
 h2 {
-   font-family: 'Roboto', sans-serif;
+   font-family: 'Proza Libre', sans-serif;
 }
 
 #parafont {
-   font-family: 'Roboto', sans-serif;
+   font-family: 'Proza Libre', sans-serif;
    font-size: larger;
 }
 
 p {
-   font-family: 'Roboto', sans-serif;
+   font-family: 'Proza Libre', sans-serif;
    font-size: larger;
 }
 
 label {
-   font-family: 'Roboto', sans-serif;
+   font-family: 'Proza Libre', sans-serif;
    font-size: larger;
-   background-color: #a6cc38;
+   /* background-color: #a6cc38; */
    /* margin-right: 125px; */
    padding-left: 10px;
    padding-right: 10px;
    border-radius: 5px;
+   color: #029A30;
+   font-weight: bold;
 }
 
 #select {
-   background-color: #a6cc38;
-   /* margin-right: 485px; */
-   padding-left: 15px;
+   font-family: 'Proza Libre', sans-serif;
+   /* background-color: #a6cc38; */
    border-radius: 5px;
+   text-align: center;
+   margin: 10px 10px 10px 10px;
+   color: #029A30;
+   font-weight: bold;
 }
 
 #usebtns {
-   background-color: #a6cc38;
+   /* background-color: #a6cc38; */
    /* margin-right: 300px; */
    padding-left: 15px;
    border-radius: 5px;
+   color: #029A30;
+   font-weight: bold;
 }
 
 #volform {
-   background-color: #a6cc38;
+   /* background-color: #a6cc38; */
    /* margin-right: 812px; */
    padding-left: 15px;
    border-radius: 5px;
+   color: #029A30;
+   font-weight: bold;
 }
 
 #selectdonate {
-   background-color: #a6cc38;
+   /* background-color: #a6cc38; */
    /* margin-right: 465px; */
-   padding-left: 15px;
    border-radius: 5px;
+   color: #029A30;
+   font-weight: bold;
+   
 }
 
 #donatetitle {
-   font-family: 'Roboto', sans-serif;
-   background-color: #a6cc38;
-   /* margin-right: 850px; */
-   padding-left: 15px;
+   font-family: 'Proza Libre', sans-serif;
+   /* background-color: #a6cc38; */
    border-radius: 5px;
+   margin: 10px 0px 10px 0px;
+   color: #029A30;
+   font-weight: bold;
 }
 
 #calendar {
@@ -167,55 +190,74 @@ label {
 }
 
 #favtitle {
-   font-family: 'Roboto', sans-serif;
-   background-color: #a6cc38;
-   /* margin-right: 875px; */
-   padding-left: 15px;
+   font-family: 'Proza Libre', sans-serif;
+   /* background-color: #a6cc38; */
    border-radius: 5px;
+   margin: 10px 0px 10px 0px;
+   color: #029A30;
+   font-weight: bold;
 }
 
 #favpage {
-   background-color: #a6cc38;
+   /* background-color: #a6cc38; */
    /* margin-right: 375px; */
-   padding-left: 15px;
+   padding-left: 5px;
    border-radius: 5px;
+   color: #029A30;
+   font-weight: bold;
 }
 
 #histitle {
-   font-family: 'Roboto', sans-serif;
-   background-color: #a6cc38;
+   font-family: 'Proza Libre', sans-serif;
+   /* background-color: #a6cc38; */
    /* margin-right: 900px; */
    padding-left: 15px;
    border-radius: 5px;
+   color: #029A30;
+   font-weight: bold;
 }
 
 #hispage {
-   background-color: #a6cc38;
+   /* background-color: #a6cc38; */
    /* margin-right: 375px; */
    padding-left: 15px;
    border-radius: 5px;
+   color: #029A30;
+   font-weight: bold;
 }
 
 #logintitle {
-   font-family: 'Roboto', sans-serif;
-   background-color: #a6cc38;
-   /* margin-right: 885px; */
-   padding-left: 15px;
+   font-family: 'Proza Libre', sans-serif;
+   /* background-color: #a6cc38; */
    border-radius: 5px;
+   margin: 10px 0px 10px 0px;
+   color: #029A30;
+   font-weight: bold;
 }
 
 #hometitle {
-   font-family: 'Roboto', sans-serif;
-   background-color: #a6cc38;
+   font-family: 'Proza Libre', sans-serif;
+   /* background-color: #a6cc38; */
    /* margin-right: 700px; */
    padding-left: 15px;
    border-radius: 5px;
+   color: #029A30;
+   font-weight: bold;
 }
 
 #homepage {
-   background-color: #a6cc38;
+   /* background-color: #a6cc38; */
    /* margin-right: 635px; */
    padding-left: 15px;
    border-radius: 5px;
+   color: #029A30;
+   font-weight: bold;
+}
+
+.nav-link {
+   font-family: 'Proza Libre', sans-serif;
+   font-weight: bold;
+   margin-top: 30px;
+   color: #00b3e6;
 }
 
