@@ -15,14 +15,15 @@
 // export default Header;
 
 import React from 'react';
-import logo from './donatemiamilogo.png'; // Tell webpack this JS file uses this image
+import {  Link } from "react-router-dom";
+import logo from './donatemiamilogo-a.png'; // Tell webpack this JS file uses this image
 import './style.css';
 
 console.log(logo); // /logo.84287d09.png
 
 function Header() {
   // Import result is the URL of your image
-  return <img src={logo} className= "logo" alt="Logo" />;
+  return <Link to="/home"><img src={logo} className= "logo" alt="Logo" title="To Home Page"/></Link>;
 }
 
 export default Header;

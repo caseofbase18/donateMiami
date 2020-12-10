@@ -1,10 +1,11 @@
 import React from "react";
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import Header from './Header';
 
 function NavTabs(props) {
   return (
     <ul className="nav nav-tabs">
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <NavLink
           to="/home"
           onClick={() => props.handlePageChange("Home")}
@@ -13,6 +14,10 @@ function NavTabs(props) {
         >
           Home
         </NavLink>
+      </li> */}
+
+      <li>
+        <Header />
       </li>
 
       <li className="nav-item">
@@ -20,9 +25,8 @@ function NavTabs(props) {
           to="/history"
           onClick={() => props.handlePageChange("History")}
           activeClassName="nav-link active"
-          className={"nav-link"}
-        >
-          History
+          className={"nav-link"}>
+          View Giving History
         </NavLink>
       </li>
 
@@ -32,7 +36,7 @@ function NavTabs(props) {
           onClick={() => props.handlePageChange("Favorites")}
           activeClassName="nav-link active"
           className={"nav-link"}>
-          Favorites
+          View Favorites
         </NavLink>
       </li>
 

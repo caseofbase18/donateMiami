@@ -19,17 +19,28 @@ const DonateForm = () => {
     return (
 
         <div>
+            <div class="row">
+                <div class="col-5">
+                    <h2 id="donatetitle">Donate Form</h2>
+                </div>
+                <div class="col-7"></div>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <p id="selectdonate">Select an organization and fill in the amount of your financial contribution.</p>
+                </div>
+                <div class="col-4"></div>
 
-            <h1 id="donatetitle">Donate Form</h1>
-            <p id="selectdonate">Select an organization and fill in the amount of your financial contribution.</p>
-            
+            </div>
+
+
             <form>
 
                 <div className="form-row">
                     <div className="form-group col-md-4">
                         <label htmlFor="inputOrganization">Name of Organization</label>
                         <select id="inputOrganization" name="organization" className="form-control"
-                        onChange={(event) => setOrganization(event.target.value)}>
+                            onChange={(event) => setOrganization(event.target.value)}>
                             <option defaultValue>Select organization...</option>
                             <option value="Women of Tomorrow">Women of Tomorrow</option>
                             <option value="Cat Network, Inc.">Cat Network, Inc.</option>
@@ -57,8 +68,8 @@ const DonateForm = () => {
                     <div className="form-group">
                         <label htmlFor="inputAmountDollars">Amount</label>
                         <input type="text" name="amount" className="form-control" id="inputAmountDollars" placeholder="$0.00"
-                        value={amount}
-                        onChange={(event) => setAmount(event.target.value)}></input>
+                            value={amount}
+                            onChange={(event) => setAmount(event.target.value)}></input>
                     </div>
                 </div>
 
