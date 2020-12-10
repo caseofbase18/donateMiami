@@ -7,6 +7,8 @@ router.route("/")
 
 router.route("/:id")
     .get(nonProfitController.findOne)
-    .delete(nonProfitController.remove);
+    .delete(nonProfitController.remove)
+    
+    .put(nonProfitController.update);
 
 module.exports = router;

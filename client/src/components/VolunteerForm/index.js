@@ -1,32 +1,36 @@
 import React, { useState } from 'react';
+import API from "../../utils/API";
 
 import Calendar from 'react-calendar';
-
-// function MyApp() {
-//   const [value, onChange] = useState(new Date());
-
-//   return (
-//     <div>
-//       <Calendar
-//         onChange={onChange}
-//         value={value}
-//       />
-//     </div>
-//   );
-// }
+import moment from "moment";
 
 const VolunteerForm = () => {
-       
+          
     const [organization, setOrganization] = useState("");
     const [amount, setAmount] = useState("");
-    const [value, onChange] = useState(new Date());
+    const [date, onChange] = useState(new Date());
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(organization, amount, value);
-        // axios.post("/api/transaction/", {organization, amount, value});
+        console.log(organization, amount, date);
+        // axios.post("/api/time/", {organization, amount, value});
+        if (!organization) {
+            alert("Please select an organization")
+        } else if (!amount) {
+            alert("Please enter the number of hours")
+        } else if (!date) {
+            alert("Please select a date in the future")
+        } else {
+            API.saveTime({
+                name: organization,
+                value: amount,
+                date: date
+            })
+            .then(res => console.log(res.data))
+            .catch(err => console.log(err));
+            alert("Thank you for your interest in " + organization + "! We will be in touch soon to coordinate the details of your volunteer service.")
     }
-    
+};    
 
     return (
 
@@ -81,7 +85,9 @@ const VolunteerForm = () => {
 
                             <Calendar
                                 onChange={onChange}
-                                value={value}
+                                // value={moment(date).format('MMMM Do YYYY')}
+                                value={date}
+                                minDate={moment().toDate()}                                
                             />
                         </div>
 

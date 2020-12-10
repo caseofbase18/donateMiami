@@ -12,7 +12,7 @@ function Select() {
   });
 
   function handleInputChange(event) {
-    const { name, value } = event.target;
+    // const { name, value } = event.target;
     console.log(event.target.value);
   };
 

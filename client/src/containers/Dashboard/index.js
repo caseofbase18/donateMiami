@@ -13,7 +13,7 @@ const Dashboard = () => {
 
         <Header />
 
-        <NavTabs />
+        {/* <NavTabs /> */}
         <br></br>
 
         {/* <h1>Home Page</h1> */}
