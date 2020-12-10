@@ -42,6 +42,7 @@ const nonProfitSchema = new Schema ({
         type: String,
     }
 
+
 });
 
 const NonProfit  = mongoose.model("NonProfit", nonProfitSchema, "NonProfits");

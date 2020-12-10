@@ -21,13 +21,13 @@ export default {
   },
 
 
-  // addFavorite: function(id) {
-  //   return axios.put("/api/nonProfits/:id");
-  // },
+  addFavorite: function(id) {
+    return axios.post(`/api/nonProfits/${id}`);
+  },
   // push id into favorites array ??
 
   // deleteFavorite: function(id) {
-  //   return axios.get("/api/nonProfits/:id");
+  //   return axios.delete("/api/nonProfits/:id", id);
   // }
   // filter nonProfits where id !=id
 
