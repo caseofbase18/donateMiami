@@ -1,28 +1,27 @@
-import React, { useState, useRef } from 'react';
+import React, { useState  } from 'react';
 import API from "../../utils/API";
 
 const DonateForm = () => {
 
     const [organization, setOrganization] = useState("");
     const [amount, setAmount] = useState("");
-    // const userRef=useRef();
 
     function handleSubmit(event) {
         event.preventDefault();
         console.log(organization, amount);
         // axios.post("/api/transaction/", {organization, amount});
-        if (organization === "Select organization...") {
-            // alert("Please select an organization")
-        } else if (amount === 0) {
-            // alert("Please enter a dollar amount")
+        if (!organization) {
+            alert("Please select an organization")
+        } else if (!amount) {
+            alert("Please enter a dollar amount")
         } else {
             API.saveTransaction({
                 name: organization,
                 value: amount
-                // user: userRef
             })
             .then(res => console.log(res.data))
             .catch(err => console.log(err));
+            
             alert("Thank you for your donation of $" + amount + " to " + organization + "!")
         }
     };

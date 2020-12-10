@@ -15,8 +15,10 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
     save: function(req, res) {
+        console.log(req.user)
         db.Time
-        .create(req.body)
+        // .create(req.body)
+        .create({...req.body, user: req.user._id})
         .then(dbModel => res.json(dbModel))
         // .catch(err = res.status(422).json(err));
         .catch(err => res.status(422).json(err));

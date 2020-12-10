@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import API from "../../utils/API";
 
 import Calendar from 'react-calendar';
+import moment from "moment";
 
 const VolunteerForm = () => {
-       
+          
     const [organization, setOrganization] = useState("");
     const [amount, setAmount] = useState("");
     const [date, onChange] = useState(new Date());
@@ -13,24 +14,21 @@ const VolunteerForm = () => {
         event.preventDefault();
         console.log(organization, amount, date);
         // axios.post("/api/time/", {organization, amount, value});
-        if (organization === "Select organization...") {
+        if (!organization) {
             alert("Please select an organization")
-        } else if (amount === 0) {
-            alert("Please enter a dollar amount")
-
-        } else if (date < (Date.now)) {
+        } else if (!amount) {
+            alert("Please enter the number of hours")
+        } else if (!date) {
             alert("Please select a date in the future")
-
         } else {
             API.saveTime({
                 name: organization,
                 value: amount,
-                date: date,
-                // user: userRef
+                date: date
             })
             .then(res => console.log(res.data))
             .catch(err => console.log(err));
-            alert("Thank you for your interest in" + organization + "!")
+            alert("Thank you for your interest in " + organization + "! We will be in touch soon to coordinate the details of your volunteer service.")
     }
 };    
 
@@ -87,8 +85,9 @@ const VolunteerForm = () => {
 
                             <Calendar
                                 onChange={onChange}
+                                // value={moment(date).format('MMMM Do YYYY')}
                                 value={date}
-                                // selectRange={true}
+                                minDate={moment().toDate()}                                
                             />
                         </div>
 

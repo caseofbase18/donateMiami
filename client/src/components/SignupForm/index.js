@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
-import axios from "axios";
 import API from '../../utils/API';
-
 
 function Signup() {
 
@@ -13,9 +11,7 @@ function Signup() {
     const [ city, setCity ] = useState("");
     const [ stateInitials, setStateInitials ] = useState("");
     const [ zip, setZip] = useState("");
-    const [ phone, setPhone ] = useState("");
-    
-
+    const [ phone, setPhone ] = useState("");   
 
     // function handleInputChange(event) {
     //     const { name, value } = event.target;
@@ -40,7 +36,6 @@ function Signup() {
         .catch(err => console.log(err));
         alert(first + " " + last + " account created successfully!")
     };
-
 
     return (
 

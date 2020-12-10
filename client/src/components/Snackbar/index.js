@@ -2,7 +2,7 @@ import React from 'react';
 import { useSnackbar } from 'react-simple-snackbar';
 
 export default function SignupAlert() {
-    const [openSnackbar, closeSnackbar] = useSnackbar()
+    const [openSnackbar, closeSnackbar] = useSnackbar();
 
     return (
         <div>

@@ -22,20 +22,18 @@ function FavoritesTable(props) {
       .catch(err => console.log(err));
   };
 
-
-
-
   function deleteFavorite(id) {
     console.log("DELETE" + id)
+
   }
 
-  function donateMoney(nonProfit) {
-    console.log(nonProfit)
-  }
+  // function donateMoney(nonProfit) {
+  //   console.log(nonProfit)
+  // }
 
-  function volunteerTime(nonProfit) {
-    console.log(nonProfit)
-  }
+  // function volunteerTime(nonProfit) {
+  //   console.log(nonProfit)
+  // }
 
   return (
     <table className="table table-hover ">
@@ -50,9 +48,9 @@ function FavoritesTable(props) {
                   <div className="row">
                     <div className="col-md-4 col-sm-12">
                       <div className="row">
-                        <div className="col-12"><img src={nonProfit.imageURL} alt={nonProfit.name} id="logo" style={{ height: 150, width: 150, marginLeft: 70}} /></div>
+                        <div className="col-12"><img src={nonProfit.imageURL} alt={nonProfit.name} id="logo" style={{ height: 150, width: 150, marginLeft: 70 }} /></div>
                       </div>
-                  </div>
+                    </div>
                     <div className="col-md-8 col-sm-12">
                       <div className="row">
                         <div className="col-12">
@@ -68,17 +66,28 @@ function FavoritesTable(props) {
                             onClick={(event) => {
                               event.preventDefault();
                               deleteFavorite(nonProfit._id);
-                              }}><span className="fa fa-trash"></span>&nbsp;&nbsp;&nbsp;Delete Favorite</button>
-                          <button type="button" className="btn btn-success customBtn shadow" id="donbutton"
+                            }}><span className="fa fa-trash"></span>&nbsp;&nbsp;&nbsp;Delete Favorite</button>
+
+                            {/* <span><a className="btn btn-success customBtn shadow" href={'/donate?npid=' + nonProfit._id} rel="noopener noreferrer" id="favbutton">FAVORITE</a></span> */}
+
+                          {/* <button type="button" className="btn btn-success customBtn shadow" id="donbutton"
                             onClick={(event) => {
                               event.preventDefault();
                               donateMoney(nonProfit.name + nonProfit._id);
-                            }}><span className="fa fa-donate"></span>&nbsp;&nbsp;&nbsp;Donate money</button>
-                          <button type="button" className="btn btn-primary customBtn shadow" id="volbutton"
+                            }}><span className="fa fa-donate"></span>&nbsp;&nbsp;&nbsp;Donate money</button> */}
+
+                          <span><a className="btn btn-success customBtn shadow" href={'/donate?npid=' + nonProfit._id} rel="noopener noreferrer"
+                            id="donbutton"><span className="fa fa-donate"></span>&nbsp;&nbsp;&nbsp;Donate money</a></span>
+
+                          {/* <button type="button" className="btn btn-primary customBtn shadow" id="volbutton"
                             onClick={(event) => {
                               event.preventDefault();
                               volunteerTime(nonProfit.name + nonProfit._id);
-                            }}><span className="fa fa-clock"></span>&nbsp;&nbsp;&nbsp;Volunteer time</button>
+                            }}><span className="fa fa-clock"></span>&nbsp;&nbsp;&nbsp;Volunteer time</button> */}
+
+                          <span><a className="btn btn-primary customBtn shadow" href={'/volunteer?npid=' + nonProfit._id} rel="noopener noreferrer"
+                            id="volbutton"><span className="fa fa-clock"></span>&nbsp;&nbsp;&nbsp;Volunteer time</a></span>
+
                         </div>
                       </div>
                     </div>
@@ -92,9 +101,9 @@ function FavoritesTable(props) {
       </tbody>
 
     </table>
-    
-    
-    
+
+
+
 
   )
 }
