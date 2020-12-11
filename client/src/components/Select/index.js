@@ -18,15 +18,11 @@ function Select() {
 
   return (
     <div>
-      <div className="row">
-        <div className="col-2"></div>
-        <div className="col-8">
+      
           <p id="select">
             Select an option below to view our non-profit organizations by category...
           </p>
-        </div>
-        <div className="col-2"></div>
-      </div>
+        
 
       <form>
         <div className="form-row">
@@ -46,6 +42,7 @@ function Select() {
           </div>
           <div className= "col-4"></div>
         </div>
+        
         <p id="select">
           ... or select the "Donate Money" or "Volunteer Time" buttons below from any organization in the list below. You can also save your favorite organizations by selecting the "Add To Favorites" button.
           </p>
