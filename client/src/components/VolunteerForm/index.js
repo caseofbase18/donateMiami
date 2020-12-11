@@ -12,8 +12,7 @@ const VolunteerForm = () => {
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(organization, amount, date);
-        // axios.post("/api/time/", {organization, amount, value});
+        // console.log(organization, amount, date);
         if (!organization) {
             alert("Please select an organization")
         } else if (!amount) {

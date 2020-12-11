@@ -8,8 +8,7 @@ const DonateForm = () => {
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(organization, amount);
-        // axios.post("/api/transaction/", {organization, amount});
+        // console.log(organization, amount);
         if (!organization) {
             alert("Please select an organization")
         } else if (!amount) {

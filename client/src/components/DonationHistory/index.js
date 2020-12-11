@@ -16,18 +16,19 @@ function DonationHistory(props) {
       .then(res => {
         setTransactions(res.data)
         calculateTotal(res.data)
-        console.log(res.data)
+        // console.log(res.data)
       })
       .catch(err => console.log(err));
   };
 
+    // Use reduce method to retrieve sum of donation values
   function calculateTotal(donations) {
     let finalValue =
       donations.reduce((value, element) => {
         return value + element.value;
       }, 0)
     setDonationTotal(finalValue)
-    console.log(finalValue)
+    // console.log(finalValue)
   }
 
   // {transaction._id}

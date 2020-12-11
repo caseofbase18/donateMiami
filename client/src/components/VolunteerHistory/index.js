@@ -16,7 +16,7 @@ function VolunteerHistory(props) {
       .then(res => {
         setTimes(res.data)
         calculateTotal(res.data)
-        console.log(res.data)
+        // console.log(res.data)
       })
       .catch(err => console.log(err));
   };
@@ -27,7 +27,7 @@ function VolunteerHistory(props) {
         return value + element.value;
       }, 0)
     setVolunteerTotal(finalValue)
-    console.log(finalValue)
+    // console.log(finalValue)
   }
 
   // {time._id}

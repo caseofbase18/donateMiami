@@ -42,7 +42,7 @@ function FavoritesTable(props) {
   // };
 
   function deleteFavorite(id) {
-    console.log(id);
+    // console.log(id);
     API.removeFavorite(id)
       .then(res =>
         console.log(res.data)
