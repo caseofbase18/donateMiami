@@ -4,6 +4,7 @@ import API from "../../utils/API";
 
 
 function FavoritesTable(props) {
+  
 
   // Setting our component's initial state
   const [nonProfits, setNonProfits] = useState([]);
@@ -16,12 +17,14 @@ function FavoritesTable(props) {
   // Loads all nonProfits and sets them to nonProfits
   function loadNonProfits() {
     API.getNonProfits()
-      .then(res =>
+      .then(res => {
         setNonProfits(res.data)
-        // console.log(res.data)
-      )
+        console.log(res.data)
+      })
       .catch(err => console.log(err));
   };
+
+
 
   // // Setting our component's initial state
   // const [favorites, setFavorites] = useState([]);
@@ -49,6 +52,8 @@ function FavoritesTable(props) {
       )
       .catch(err => console.log(err));
   }
+
+
 
   return (
     <table className="table table-hover ">

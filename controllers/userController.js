@@ -27,7 +27,7 @@ module.exports = {
       .catch(err => res.status(409).json(err));
   },
   removeFavorite: function (req, res) {
-    db.User.updateOne({ _id: req.user._id }, { $pullAll: { favorites: req.params.id } })
+    db.User.updateOne({ _id: req.user._id }, { $pull: { favorites: req.params.id } })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(409).json(err));
   }
