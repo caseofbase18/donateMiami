@@ -14,12 +14,7 @@ function Favorites() {
       <NavTabs />
       <br></br>
 
-      <div className="row">
-        <div className="col-6">
-          <h2 id="favtitle"> Favorites Page </h2>
-        </div>
-        <div className="col-6"></div>
-      </div>
+      <h2 id="favtitle"> Favorites Page </h2>
 
       <p id="favpage">
         {/* This page will contain a table of the orgainizations the user has selected as favorites. */}

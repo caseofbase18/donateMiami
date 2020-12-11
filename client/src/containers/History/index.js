@@ -11,17 +11,11 @@ function History(props) {
   return (
     <div>
 
-      {/* <Header /> */}
-
-      <NavTabs />
-      <br></br>
-
-      <div className="row">
-        <div className="col-6">
+      <Header />
+      
+        
           <h2 id="histitle">History Page</h2>
-        </div>
-        <div className="col-6"></div>
-      </div>
+      
 
       <p id="hispage">
         Here is your donation and volunteer history.

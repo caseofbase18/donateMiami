@@ -27,7 +27,7 @@ function VolunteerHistory(props) {
 
   return (
     <div>
-      <table className="table">
+      <table className="table" id="volhistable">
         <thead>
           <tr >
             <th scope="col">Organization</th>

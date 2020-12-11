@@ -1,4 +1,4 @@
-import React, { useState  } from 'react';
+import React, { useState } from 'react';
 import API from "../../utils/API";
 
 const DonateForm = () => {
@@ -19,35 +19,26 @@ const DonateForm = () => {
                 name: organization,
                 value: amount
             })
-            .then(res => console.log(res.data))
-            .catch(err => console.log(err));
-            
-            alert("Thank you for your donation of $" + amount + " to " + organization + "!");
+                .then(res => console.log(res.data))
+                .catch(err => console.log(err));
+
+            alert("Thank you for your donation of $" + amount + " to " + organization + "!")
         }
     };
 
     return (
 
         <div>
-            <div className="row">
-                <div className="col-5">
-                    <h2 id="donatetitle">Donate Form</h2>
-                </div>
-                <div className="col-7"></div>
-            </div>
-            <div className="row">
-                <div className="col-8">
-                    <p id="selectdonate">Select an organization and fill in the amount of your financial contribution.</p>
-                </div>
-                <div className="col-4"></div>
 
-            </div>
+            <h2 id="donatetitle">Donate Form</h2>
+
+            <p id="selectdonate">Select an organization and fill in the amount of your financial contribution.</p>
 
             <form>
 
                 <div className="form-row">
                     <div className="form-group col-md-4">
-                        <label htmlFor="inputOrganization">Name of Organization</label>
+                        <label htmlFor="inputOrganization">Organization</label>
                         <select id="inputOrganization" name="organization" className="form-control"
                             onChange={(event) => setOrganization(event.target.value)}>
                             <option defaultValue>Select organization...</option>

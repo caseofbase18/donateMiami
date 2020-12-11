@@ -22,13 +22,11 @@ const Dashboard = () => {
         <br></br>
 
         {/* <h1>Home Page</h1> */}
-        <div className="row">
-            <div className="col-2"></div>
-            <div className="col-8">
+       
                 <h1 id="dashtitle">Welcome to Donate Miami!</h1>
-            </div>
-            <div className="col-2"></div>
-        </div>
+                <h4 id="dashparagraph"> Thank you for choosing this site to donate to your favorite non-profit organizations in</h4> 
+                <h4 id="dashparagraph">Miami-Dade County!</h4>
+           
         <br></br>
 
         <Select setSelectedCategory={setSelectedCategory}/>

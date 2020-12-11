@@ -37,14 +37,14 @@ const VolunteerForm = () => {
 
         <div>
 
-            <h1 id="volform">Volunteer Form</h1>
-            <p id="volparagraph">Select an organization, how may hours you would like to contribute, and the date of your availability.</p>
+            <h2 id="volform">Volunteer Form</h2>
+            <p id="volparagraph">Select an organization, how many hours you would like to contribute, and the date of your availability.</p>
 
             <form>
                            
                 <div className="form-row">
                     <div className="form-group col-md-4">
-                        <label htmlFor="inputOrganization">Name of Organization</label>
+                        <label htmlFor="inputOrganization">Organization</label>
                         <select id="inputOrganization" name="organization" className="form-control"
                         onChange={(event) => setOrganization(event.target.value)}>
                             <option defaultValue>Select organization...</option>
