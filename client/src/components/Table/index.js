@@ -7,19 +7,35 @@ function Table(props) {
 
   // Setting our component's initial state
   const [nonProfits, setNonProfits] = useState([]);
+  const [originalNonProfits, setOriginalNonProfits] = useState([]);
 
   // When component mounts, load non Profits from db
   useEffect(() => {
     loadNonProfits()
   }, [])
 
-  // Loads all books and sets them to books
+  // When category selected, load non Profits from db
+
+  useEffect(() => {
+    console.log(props.selectedCategory)
+    if (props.selectedCategory !== "Select category...") {
+      const nonProfitClone = originalNonProfits.filter((nonProfit) => {
+        return props.selectedCategory === nonProfit.category
+      })
+      setNonProfits(nonProfitClone)
+    } else {
+      setNonProfits(originalNonProfits)
+    }
+  }, [props.selectedCategory])
+
+  // Loads all nonProfits and sets them to nonProfits
   function loadNonProfits() {
     API.getNonProfits()
-      .then(res =>
+      .then(res => {
         setNonProfits(res.data)
-        // console.log(res.data)
-      )
+        setOriginalNonProfits(res.data)
+        console.log(props.selectedCategory, res.data)
+      })
       .catch(err => console.log(err));
   };
 
@@ -29,19 +45,13 @@ function Table(props) {
   function newFavorite(id) {
     console.log(id);
     API.addFavorite(id)
-    .then(res =>
-      console.log(res.data)
-    )
-    .catch(err => console.log(err));
+      .then(res =>
+        console.log(res.data)
+      )
+      .catch(err => console.log(err));
+
+    alert("Added to favorites!");
   }
-
-  // function donateMoney(nonProfit) {
-  //   console.log("DONATE " + nonProfit);
-  // }
-
-  // function volunteerTime(nonProfit) {
-  //   console.log("VOLUNTEER " + nonProfit);
-  // }
 
   return (
     <table className="table table-hover ">
@@ -78,23 +88,11 @@ function Table(props) {
 
                           {/* <span><a className="btn btn-success customBtn shadow" href={'/donate?npid=' + nonProfit._id} rel="noopener noreferrer" id="favbutton">FAVORITE</a></span> */}
 
-                          {/* <button type="button" className="btn btn-success customBtn shadow" id="donbutton"
-                                onClick={(event) => {
-                                  event.preventDefault();
-                                  donateMoney(nonProfit.name + nonProfit._id);
-                                }}><span className="fa fa-donate"></span>&nbsp;&nbsp;&nbsp;Donate money</button> */}
-
-                          <span><a className="btn btn-success customBtn shadow" href={'/donate?npid=' + nonProfit._id} rel="noopener noreferrer" 
+                          <span><a className="btn btn-success customBtn shadow" href={'/donate?npid=' + nonProfit._id} rel="noopener noreferrer"
                             id="donbutton"><span className="fa fa-donate"></span>&nbsp;&nbsp;&nbsp;Donate money</a></span>
 
-                          {/* <button type="button" className="btn btn-primary customBtn shadow" id="volbutton"
-                            onClick={(event) => {
-                              event.preventDefault();
-                              volunteerTime(nonProfit.name + nonProfit._id);
-                            }}><span className="fa fa-clock"></span>&nbsp;&nbsp;&nbsp;Volunteer time</button> */}
-
-                            <span><a className="btn btn-primary customBtn shadow" href={'/volunteer?npid=' + nonProfit._id} rel="noopener noreferrer" 
-                              id="volbutton"><span className="fa fa-clock"></span>&nbsp;&nbsp;&nbsp;Volunteer time</a></span>
+                          <span><a className="btn btn-primary customBtn shadow" href={'/volunteer?npid=' + nonProfit._id} rel="noopener noreferrer"
+                            id="volbutton"><span className="fa fa-clock"></span>&nbsp;&nbsp;&nbsp;Volunteer time</a></span>
                         </div>
                       </div>
                     </div>

@@ -20,6 +20,7 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(409).json(err));
   },
+  
   addFavorite: function (req, res) {
     db.User.updateOne({ _id: req.user._id }, { $push: { favorites: req.params.id } })
       .then(dbModel => res.json(dbModel))

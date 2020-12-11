@@ -23,7 +23,7 @@ console.log(logo); // /logo.84287d09.png
 
 function Header() {
   // Import result is the URL of your image
-  return <Link to="/home"><img src={logo} className= "logo" alt="Logo" title="To Home Page"/></Link>;
+  return <Link to="/dashboard"><img src={logo} className= "logo" alt="Logo" title="Back To Dashboard"/></Link>;
 }
 
 export default Header;
