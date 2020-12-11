@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import nonProfits from "../../nonProfitSeed.json";
 import API from "../../utils/API";
 
 
