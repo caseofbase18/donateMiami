@@ -26,7 +26,7 @@ function DonationHistory(props) {
 
   return (
     <div>
-      <table className="table">
+      <table className="table" id="donhistable">
         <thead>
           <tr >
             <th scope="col">Organization</th>
