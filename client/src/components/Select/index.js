@@ -1,7 +1,29 @@
-import React from "react";
-import nonProfits from "../../nonProfitSeed.json";
+import React, { useState, useEffect } from 'react';
+// import nonProfits from "../../nonProfitSeed.json";
+import API from "../../utils/API";
 
-function Select() {
+
+function Select(props) {
+
+  // Setting our component's initial state
+  const [nonProfits, setNonProfits] = useState([]);
+
+  // When component mounts, load non Profits from db
+  useEffect(() => {
+    loadNonProfits()
+  }, [])
+  
+
+  // Loads all nonProfits and sets them to nonProfits
+  function loadNonProfits() {
+    API.getNonProfits()
+      .then(res =>
+        setNonProfits(res.data)
+        // console.log(res.data)
+      )
+      .catch(err => console.log(err));
+  };
+  
 
   const uniqueCategories = [];
   nonProfits.forEach(nonProfit => {
@@ -11,9 +33,10 @@ function Select() {
     }
   });
 
-  function handleInputChange(event) {
+  function handleInputChange(event) {    
     // const { name, value } = event.target;
-    console.log(event.target.value);
+    // console.log(event.target.value);
+    props.setSelectedCategory(event.target.value);
   };
 
   return (
@@ -30,11 +53,12 @@ function Select() {
 
       <form>
         <div className="form-row">
-          <div className= "col-4"></div>
+          <div className="col-4"></div>
           <div className="form-group col-md-4">
             <label htmlFor="inputCategory"></label>
-            <select id="inputCategory" className="form-control"
+            <select id="inputCategory" name="category" className="form-control"
               onChange={handleInputChange}>
+                <option defaultValue>Select category...</option>
               {
                 uniqueCategories.map((category, index) => {
                   return (
@@ -44,7 +68,7 @@ function Select() {
               }
             </select>
           </div>
-          <div className= "col-4"></div>
+          <div className="col-4"></div>
         </div>
         <p id="select">
           ... or select the "Donate Money" or "Volunteer Time" buttons below from any organization in the list below. You can also save your favorite organizations by selecting the "Add To Favorites" button.

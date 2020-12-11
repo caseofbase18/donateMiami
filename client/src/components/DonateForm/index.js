@@ -22,7 +22,7 @@ const DonateForm = () => {
             .then(res => console.log(res.data))
             .catch(err => console.log(err));
             
-            alert("Thank you for your donation of $" + amount + " to " + organization + "!")
+            alert("Thank you for your donation of $" + amount + " to " + organization + "!");
         }
     };
 
@@ -59,7 +59,7 @@ const DonateForm = () => {
                             <option value="Whispering Manes Therapeutic Riding Center">Whispering Manes Therapeutic Riding Center</option>
                             <option value="Take Stock in Children">Take Stock in Children</option>
                             <option value="American Childrens Orchestras for Peace">American Childrens Orchestras for Peace</option>
-                            <option value="NatioNational Voices for Equality Education and Enlightenmentnal">National Voices for Equality Education and Enlightenment</option>
+                            <option value="National Voices for Equality Education and Enlightenment">National Voices for Equality Education and Enlightenment</option>
                             <option value="Veterans Ocean Adventures Inc">Veterans Ocean Adventures, Inc</option>
                             <option value="Sandals Foundation Inc">Sandals Foundation Inc</option>
                             <option value="Art Studio Inc">Art Studio Inc</option>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import Header from "../../components/Header";
 import NavTabs from "../../components/NavTabs";
@@ -9,6 +9,11 @@ import Table from "../../components/Table";
 import "../../pages/style.css";
 
 const Dashboard = () => {
+
+    // Setting our component's initial state
+    const [selectedCategory, setSelectedCategory] = useState("");
+
+
     return <div>
 
         {/* <Header /> */}
@@ -26,12 +31,12 @@ const Dashboard = () => {
         </div>
         <br></br>
 
-        <Select />
+        <Select setSelectedCategory={setSelectedCategory}/>
         <br></br>
 
         {/* <p id="usebtns">Use the buttons below to make a donation of your time or money to a local non-profit charity.</p> */}
 
-        <Table />
+        <Table selectedCategory={selectedCategory}/>
 
         <Footer />
     </div>

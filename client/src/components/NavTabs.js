@@ -5,16 +5,6 @@ import Header from './Header';
 function NavTabs(props) {
   return (
     <ul className="nav nav-tabs">
-      {/* <li className="nav-item">
-        <NavLink
-          to="/home"
-          onClick={() => props.handlePageChange("Home")}
-          activeClassName="nav-link active"
-          className={"nav-link"}
-        >
-          Home
-        </NavLink>
-      </li> */}
 
       <li>
         <Header />
@@ -22,31 +12,25 @@ function NavTabs(props) {
 
       <li className="nav-item">
         <NavLink
-          to="/history"
-          onClick={() => props.handlePageChange("History")}
-          activeClassName="nav-link active"
-          className={"nav-link"}>
-          View Giving History
+          to="/history">
+          <span className={"nav-link"} rel="noopener noreferrer"
+            id="history">&nbsp;&nbsp;&nbsp;View Giving History</span>
         </NavLink>
       </li>
 
       <li className="nav-item">
         <NavLink
-          to="/favorites"
-          onClick={() => props.handlePageChange("Favorites")}
-          activeClassName="nav-link active"
-          className={"nav-link"}>
-          View Favorites
+          to="/favorites">
+          <span className={"nav-link"} rel="noopener noreferrer"
+            id="favorites">&nbsp;&nbsp;&nbsp;View Favorites</span>
         </NavLink>
       </li>
 
       <li className="nav-item">
         <NavLink
-          to="/logout"
-          onClick={() => props.handlePageChange("Logout")}
-          activeClassName="nav-link active"
-          className={"nav-link"}>
-          Logout
+          to="/home">
+          <span className={"nav-link"} rel="noopener noreferrer"
+            id="logout">&nbsp;&nbsp;&nbsp;Logout</span>
         </NavLink>
       </li>
 

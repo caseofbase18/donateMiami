@@ -1,6 +1,7 @@
 import React from "react";
 
 import Header from "../../components/Header";
+import NavTabs from "../../components/NavTabs";
 import Footer from "../../components/Footer";
 import FavoritesTable from "../../components/FavoritesTable";
 
@@ -8,7 +9,10 @@ function Favorites() {
   return (
     <div>
 
-      <Header />
+      {/* <Header /> */}
+
+      <NavTabs />
+      <br></br>
 
       <div className="row">
         <div className="col-6">

@@ -25,8 +25,7 @@ const HomePage = () => {
 
                     to make a donation to a local charity in Miami-Dade County.
                 </p>
-{/* 
-                <Link to="/dashboard">Go to Dashboard</Link> */}
+                {/* <Link to="/dashboard">Go to Dashboard</Link> */}
             </div>
             <div className="col-3"></div>
 
