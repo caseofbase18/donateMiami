@@ -28,6 +28,7 @@
     "md5": "^2.3.0",
     "mdbreact": "^5.0.0",
     "moment": "^2.29.1",
+    "moments": "0.0.2",
     "mongo-seeding": "^3.5.0",
     "mongoose": "^5.11.4",
     "passport": "^0.4.1",
