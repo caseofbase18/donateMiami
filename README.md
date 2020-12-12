@@ -64,9 +64,17 @@ npm test
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at dlanodcm4517@gmail.com
+If you have any questions about the repo, open an issue or contact us directly at: 
 
-You can find more of my work at [GITHUBrepo](https://github.com/lisamcgautier)
+Casey: caseymaltese@gmail.com
+Jorge: jsepulvewd@gmail.com
+Lisa: dlanodcm4517@gmail.com
+
+You can find more of our work at:
+Casey: [GITHUBrepo](https://github.com/caseofbase18)
+Jorge: [GITHUBrepo](https://github.com/jrgsepulveda)
+Lisa: [GITHUBrepo](https://github.com/lisamcgautier)
+ 
 
 ### Donate Miami
 Is web application that will let you donate to local non profits. You can donate your time or money.
