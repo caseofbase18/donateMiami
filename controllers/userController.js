@@ -20,7 +20,7 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(409).json(err));
   },
-  
+
   addFavorite: function (req, res) {
     db.User.updateOne({ _id: req.user._id }, { $push: { favorites: req.params.id } })
       .then(dbModel => res.json(dbModel))
@@ -30,5 +30,12 @@ module.exports = {
     db.User.updateOne({ _id: req.user._id }, { $pull: { favorites: req.params.id } })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(409).json(err));
+
+  },
+  getFavorites: function (req, res) {
+    db.User.findOne({ _id: req.user._id }).populate("favorites")
+      // .find(req.query)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
   }
 };
