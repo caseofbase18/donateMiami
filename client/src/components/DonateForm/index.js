@@ -30,7 +30,7 @@ const DonateForm = () => {
 
         <div>
 
-            <h2 id="donatetitle">Donate Form</h2>
+            <h2 id="donatetitle">Donation Form</h2>
 
             <p id="selectdonate">Select an organization and fill in the amount of your financial contribution.</p>
 

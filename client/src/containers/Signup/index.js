@@ -19,8 +19,6 @@ const SignupPage = () => {
 
         <SignupForm />
 
-
-        {/* <SignupAlert /> */}
     </div>
 
 }
