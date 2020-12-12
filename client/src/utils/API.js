@@ -31,9 +31,9 @@ export default {
 
   
 
-  // getFavorites: function() {
-  //   return axios.get("/api/nonProfits");
-  // },
+  getFavorites: function(userData) {
+    return axios.get("/api/account", userData);
+  },
 
 
 
