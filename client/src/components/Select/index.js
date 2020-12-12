@@ -12,7 +12,7 @@ function Select(props) {
   useEffect(() => {
     loadNonProfits()
   }, [])
-  
+
 
   // Loads all nonProfits and sets them to nonProfits
   function loadNonProfits() {
@@ -23,7 +23,7 @@ function Select(props) {
       )
       .catch(err => console.log(err));
   };
-  
+
 
   const uniqueCategories = [];
   nonProfits.forEach(nonProfit => {
@@ -33,7 +33,7 @@ function Select(props) {
     }
   });
 
-  function handleInputChange(event) {    
+  function handleInputChange(event) {
     // const { name, value } = event.target;
     // console.log(event.target.value);
     props.setSelectedCategory(event.target.value);
@@ -41,11 +41,11 @@ function Select(props) {
 
   return (
     <div>
-      
-          <p id="select">
-            Select an option below to view our non-profit organizations by category...
-          </p>
-        
+
+      <h5 id="select">
+        Select an option below to find non-profit organizations by category...
+          </h5>
+
 
       <form>
         <div className="form-row">
@@ -54,7 +54,7 @@ function Select(props) {
             <label htmlFor="inputCategory"></label>
             <select id="inputCategory" name="category" className="form-control"
               onChange={handleInputChange}>
-                <option defaultValue>Select category...</option>
+              <option defaultValue>Select category...</option>
               {
                 uniqueCategories.map((category, index) => {
                   return (
@@ -66,10 +66,15 @@ function Select(props) {
           </div>
           <div className="col-4"></div>
         </div>
-        
-        <p id="select">
-          ... or select the "Donate Money" or "Volunteer Time" buttons below from any organization in the list below. You can also save your favorite organizations by selecting the "Add To Favorites" button.
-          </p>
+
+        <h5 id="select">
+          ... or find an organization from the list below.
+          </h5>
+        <br></br>
+
+        <h5 id="instructions"> Once you have found the organization you would like to support, then choose the <u>Donate Money</u> or <u>Volunteer Time</u> buttons to make a financial contribution or offer volunteer hours. You can also save your favorite organizations by selecting the <u>Add To Favorites</u> button.
+        </h5>
+
       </form>
     </div>
   );

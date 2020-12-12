@@ -8,8 +8,6 @@ import VolunteerForm from '../../components/VolunteerForm';
 const Volunteer = () => {
     return <div>
 
-        {/* <Header /> */}
-
         <NavTabs />
         <br></br>
 

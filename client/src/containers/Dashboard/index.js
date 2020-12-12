@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 import Header from "../../components/Header";
 import NavTabs from "../../components/NavTabs";
@@ -16,25 +16,21 @@ const Dashboard = () => {
 
     return <div>
 
-        {/* <Header /> */}
-
         <NavTabs />
         <br></br>
 
-        {/* <h1>Home Page</h1> */}
-       
-                <h1 id="dashtitle">Welcome to Donate Miami!</h1>
-                <h4 id="dashparagraph"> Thank you for choosing this site to donate to your favorite non-profit organizations in</h4> 
-                <h4 id="dashparagraph">Miami-Dade County!</h4>
-           
+        <h1 id="dashtitle"><u>Welcome to Donate Miami!</u></h1>
+        
+        <h4 id="dashparagraph"> Your site for supporting your favorite non-profit organizations in</h4>
+        <h4 id="dashparagraph">Miami-Dade County!</h4>
+
+        <h1 style={{ color: "#eb008b", textAlign: "center" }} id="heart">&hearts;</h1>
+
+        <Select setSelectedCategory={setSelectedCategory} />
         <br></br>
 
-        <Select setSelectedCategory={setSelectedCategory}/>
+        <Table selectedCategory={selectedCategory} />
         <br></br>
-
-        {/* <p id="usebtns">Use the buttons below to make a donation of your time or money to a local non-profit charity.</p> */}
-
-        <Table selectedCategory={selectedCategory}/>
 
         <Footer />
     </div>

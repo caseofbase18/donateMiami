@@ -10,19 +10,14 @@ const HomePage = () => {
 
         <Header />
 
-                <h2 id="hometitle">Welcome to Donate Miami!</h2>
+        <h2 id="hometitle">Welcome to Donate Miami!</h2>
 
-                <p id="homepage">
-                    <Link to="/login">Login</Link> or
-
-                    <Link to="/signup"> Sign up </Link>
-
-                    to make a donation to a local charity in Miami-Dade County.
-                </p>
-        
+        <p id="homepage">
+            <Link to="/login">Login</Link> or <Link to="/signup"> Sign up </Link> to make a donation to a local charity in Miami-Dade County.
+        </p>
 
         <FooterSmall />
-        {/* <Footer /> */}
+
     </div>
 }
 export default HomePage;

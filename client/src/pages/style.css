@@ -1,6 +1,6 @@
 /* background image */
 body {
-background-image: url(./6464940-35c.png);
+background-image: url(./6464940-35f.png);
 
 /* Background image is centered vertically and horizontally at all times */
 background-position: center center;
@@ -47,21 +47,30 @@ input {
    text-align: center;
 }
 
-/* formats table */
+/* formats table on dashboard and favorites pages */
 .table {
    background-color: #faf5a6;
    border-radius: 10px; 
 }
 
-/* format of donation table on history page */
+/* formats logo image for non-profits on dashboard and favorites pages */
+#logo {
+   border-radius: 5px;
+   border: 1px solid black;
+   margin-top: 10px;
+   
+}
+
+/* formats donation table on history page */
 #donhistable {
    background-color: #fbd4a4;
 }
  
-/* format of volunteer table on history page */
+/* formats volunteer table on history page */
 #volhistable {
    background-color: #b2e8f7;
 }
+
 .externalLink {
    color: #0000FF !important;
    text-decoration: underline;
@@ -106,44 +115,40 @@ button {
    opacity: 65%;
 }
 
-/* formats logo image for non-profits */
-#logo {
-   border-radius: 5px;
-   border: 1px solid black;
-   margin-top: 10px;
-   
-}
-
+/* imports font */
 @import url('https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,500;1,400&display=swap');
 
-/* title for dashboard */
+/* formats title for dashboard */
 #dashtitle {
    font-family: 'Proza Libre', sans-serif;
    /* background-color: #a6cc38; */
    border-radius: 5px;
    text-align: center;
    margin: 10px 10px 10px 10px;
-   color: #029A30;
+   color: #a6cc38;
    font-weight: bold;
 }
 
+/* formats subtitle for dashboard */ 
 #dashparagraph {
    color: #2b5ea3;
    font-weight: bold;
    text-align: center;
 }
 
-/* titles for organizations */
-h2 {
+/* formats instructions for user on dashboard */
+#instructions {
    font-family: 'Proza Libre', sans-serif;
+   border-radius: 5px;
+   text-align: center;
+   margin: 10px 10px 10px 10px;
+   color: #2b5ea3;
+   font-weight: bold;
 }
 
-/* formats text for history page */
-#donvolhistory {
+/* titles for organizations in dashboard and favorites tables */
+h2 {
    font-family: 'Proza Libre', sans-serif;
-   color: #029A30;
-   font-weight: bold;
-   text-decoration: underline;
 }
 
 #parafont {
@@ -151,7 +156,7 @@ h2 {
    font-size: larger;
 }
 
-/* formats text for all paragraphs */
+/* formats text for all paragraphs*/
 p {
    font-family: 'Proza Libre', sans-serif;
    font-size: larger;
@@ -179,49 +184,48 @@ label {
 }
 
 #usebtns {
-   /* background-color: #a6cc38; */
-   /* margin-right: 300px; */
    padding-left: 15px;
    border-radius: 5px;
    color: #029A30;
    font-weight: bold;
 }
 
-/* formats text for volunteer form */
+/* formats title for volunteer form */
 #volform {
    border-radius: 5px;
-   color: #029A30;
+   color: #a6cc38;
    font-weight: bold;
+   text-decoration: underline;
 }
 
-/*  */
+/*formats subtitle for volunteer form */ 
 #volparagraph {
-   color: #029A30;
+   color: #2b5ea3;
    font-weight: bold;
 }
 
-
-#selectdonate {
-   border-radius: 5px;
-   color: #029A30;
-   font-weight: bold;
-   
-}
-
-/* formats text for Donation page title */
-#donatetitle {
-   font-family: 'Proza Libre', sans-serif;
-   border-radius: 5px;
-   margin: 10px 0px 10px 0px;
-   color: #029A30;
-   font-weight: bold;
-}
-
-/* calendar formatting */
+/* calendar formatting on volunteer page */
 #calendar {
    background-color: #f5941c;
    padding-bottom: 25px;
    border-radius: 5px;
+}
+
+/* formats text for donation form title */
+#donatetitle {
+   font-family: 'Proza Libre', sans-serif;
+   border-radius: 5px;
+   margin: 10px 0px 10px 0px;
+   color: #a6cc38;
+   font-weight: bold;
+   text-decoration: underline;
+}
+
+/* formats subtitle on donation form */
+#selectdonate {
+   border-radius: 5px;
+   color: #2b5ea3;
+   font-weight: bold;
 }
 
 /* formats text for Favorites title */
@@ -229,14 +233,16 @@ label {
    font-family: 'Proza Libre', sans-serif;
    border-radius: 5px;
    margin: 10px 0px 10px 0px;
-   color: #029A30;
+   color: #a6cc38;;
    font-weight: bold;
+   text-decoration: underline;
 }
 
+/* formats subtitle for favorites page */
 #favpage {
    padding-left: 5px;
    border-radius: 5px;
-   color: #029A30;
+   color: #2b5ea3;
    font-weight: bold;
 }
 
@@ -244,23 +250,41 @@ label {
 #histitle {
    font-family: 'Proza Libre', sans-serif;
    border-radius: 5px;
-   color: #029A30;
+   color: #a6cc38;
    font-weight: bold;
+   text-decoration: underline;
+   
 }
 
+/* formats subtitle for history page */
 #hispage {
    border-radius: 5px;
-   color: #029A30;
+   color: #2b5ea3;
    font-weight: bold;
 }
 
-/* formats text for login title */
+/* formats title for donation table on history page */
+#donhistory {
+   font-family: 'Proza Libre', sans-serif;
+   color: #f5941c;
+   font-weight: bold;
+}
+
+/* formats title for volunteer table on history page */
+#volhistory {
+   font-family: 'Proza Libre', sans-serif;
+   color: #00b3e6;
+   font-weight: bold;
+}
+
+/* formats title for login page */
 #logintitle {
    font-family: 'Proza Libre', sans-serif;
    border-radius: 5px;
    margin: 10px 0px 10px 0px;
-   color: #029A30;
+   color: #a6cc38;
    font-weight: bold;
+   text-decoration: underline;
 }
 
 /* formats title on signup page */
@@ -268,10 +292,12 @@ label {
    font-family: 'Proza Libre', sans-serif;
    border-radius: 5px;
    margin: 10px 0px 10px 0px;
-   color: #029A30;
+   color: #a6cc38;
    font-weight: bold;
+   text-decoration: underline;
 }
 
+/* formats subtitle for signup page */
 #signuppage {
    border-radius: 5px;
    color: #029A30;
@@ -283,10 +309,12 @@ label {
    font-family: 'Proza Libre', sans-serif;
    padding-left: 15px;
    border-radius: 5px;
-   color: #029A30;
+   color: #a6cc38;
    font-weight: bold;
+   text-decoration: underline;
 }
 
+/* formats subtitle for homepage */
 #homepage {
    padding-left: 15px;
    border-radius: 5px;
@@ -298,7 +326,7 @@ label {
 .nav-link {
    font-family: 'Proza Libre', sans-serif;
    font-weight: bold;
-   margin-top: 30px;
+   margin-top: 35px;
    color: #00b3e6;
 }
 
@@ -310,4 +338,6 @@ label {
    font-weight: bold;
    color: #029A30;
 }
+
+
 
