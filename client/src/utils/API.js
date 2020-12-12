@@ -28,17 +28,10 @@ export default {
     return axios.delete(`/api/nonProfits/${id}`);
   },
 
-
+  getFavorites: function() {
+    return axios.get("/api/account");
+  }, 
   
-
-  // getFavorites: function() {
-  //   return axios.get("/api/nonProfits");
-  // },
-
-
-
-
-
   saveTransaction: function(donationData) {
     return axios.post("/api/transaction", donationData);
   },

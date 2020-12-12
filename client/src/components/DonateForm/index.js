@@ -22,8 +22,15 @@ const DonateForm = () => {
                 .catch(err => console.log(err));
 
             alert("Thank you for your donation of $" + amount + " to " + organization + "!")
+
+            // clearForm();
         }
     };
+
+    // function clearForm({
+    //     organization="",
+    //     amount=""
+    // });
 
     return (
 

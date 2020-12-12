@@ -14,10 +14,10 @@ const userSchema = new Schema({
   state:{type: String, required: true},
   zip:{type: Number, required: true},
   phone:{type: String, required: true},
-  favorites: [{
-    type: mongoose.SchemaTypes.ObjectId,
-    ref: "NonProfit",
-}]
+    favorites: [{
+        type: mongoose.SchemaTypes.ObjectId,
+        ref: "NonProfit",
+    }]
 });
 
 const User = mongoose.model("User", userSchema);
