@@ -1,17 +1,17 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import API from '../../utils/API';
 
 function Signup() {
 
-    const [ email, setEmail ] = useState("");
-    const [ password, setPassword ] = useState("");
-    const [ first, setFirst] = useState("");
-    const [ last, setLast ] = useState("");
-    const [ address, setAddress ] = useState("");
-    const [ city, setCity ] = useState("");
-    const [ stateInitials, setStateInitials ] = useState("");
-    const [ zip, setZip] = useState("");
-    const [ phone, setPhone ] = useState("");   
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [first, setFirst] = useState("");
+    const [last, setLast] = useState("");
+    const [address, setAddress] = useState("");
+    const [city, setCity] = useState("");
+    const [stateInitials, setStateInitials] = useState("");
+    const [zip, setZip] = useState("");
+    const [phone, setPhone] = useState("");
 
     // function handleInputChange(event) {
     //     const { name, value } = event.target;
@@ -20,20 +20,20 @@ function Signup() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        // console.log(email, password, first, last, address, city, stateInitials, zip, phone);
-        API.signUp({   
+        console.log(email, password, first, last, address, city, stateInitials, zip, phone);
+        API.signUp({
             email: email,
             password: password,
             firstName: first,
-            lastName:last,
-            address:address,
-            city:city,
-            state:stateInitials,
+            lastName: last,
+            address: address,
+            city: city,
+            state: stateInitials,
             zip: zip,
             phone: phone
         })
-        .then(res => console.log(res.data))
-        .catch(err => console.log(err));
+            .then(res => console.log(res.data))
+            .catch(err => console.log(err));
         alert(first + " " + last + " account created successfully!")
     };
 
@@ -91,7 +91,7 @@ function Signup() {
                         <label htmlFor="inputState">State</label>
                         <select id="inputState" name="stateInitials" className="form-control"
 
-                            
+
                             onChange={(event) => setStateInitials(event.target.value)}>
                             <option defaultValue>Choose...</option>
                             {/* <option value="" selected="selected">Select a State</option> */}

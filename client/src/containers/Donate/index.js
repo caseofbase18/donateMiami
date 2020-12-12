@@ -8,8 +8,6 @@ import DonateForm from '../../components/DonateForm';
 const Donate = () => {
     return <div>
 
-        {/* <Header /> */}
-
         <NavTabs />
         <br></br>
 
