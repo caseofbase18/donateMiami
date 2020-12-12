@@ -4,6 +4,7 @@ import API from '../../utils/API';
 function VolunteerHistory(props) {
 
   const [times, setTimes] = useState([]);
+  const [volunteerTotal, setVolunteerTotal] = useState([]);
 
   // When component mounts, load volunteer times from db
   useEffect(() => {
@@ -12,29 +13,39 @@ function VolunteerHistory(props) {
 
   function loadTimes() {
     API.getTimes()
-      .then(res =>
+      .then(res => {
         setTimes(res.data)
+        calculateTotal(res.data)
         // console.log(res.data)
-      )
+      })
       .catch(err => console.log(err));
   };
+
+  function calculateTotal(volunteerHours) {
+    let finalValue =
+      volunteerHours.reduce((value, element) => {
+        return value + element.value;
+      }, 0)
+    setVolunteerTotal(finalValue)
+    // console.log(finalValue)
+  }
 
   // {time._id}
   // {time.name}
   // {time.value}
   // {time.date}
 
-
   return (
     <div>
-      <table className="table">
+      <table className="table" id="volhistable">
         <thead>
           <tr >
-            <th scope="col">Organization</th>
-            <th scope="col">Hours</th>
-            <th scope="col">Date</th>
+            <th scope="col"><b>Organization</b></th>
+            <th scope="col"><b>Hours</b></th>
+            <th scope="col"><b>Date</b></th>
           </tr>
         </thead>
+
         <tbody>
           {
             times.map((time) => {
@@ -47,6 +58,10 @@ function VolunteerHistory(props) {
               )
             })
           }
+          <tr className="total" id="volhisttotal">
+            <th><b>Total Hours</b></th>
+            <th><b>{volunteerTotal}</b></th>
+          </tr>
         </tbody>
       </table>
     </div>

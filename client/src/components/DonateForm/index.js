@@ -1,4 +1,4 @@
-import React, { useState  } from 'react';
+import React, { useState } from 'react';
 import API from "../../utils/API";
 
 const DonateForm = () => {
@@ -8,8 +8,7 @@ const DonateForm = () => {
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(organization, amount);
-        // axios.post("/api/transaction/", {organization, amount});
+        // console.log(organization, amount);
         if (!organization) {
             alert("Please select an organization")
         } else if (!amount) {
@@ -19,9 +18,9 @@ const DonateForm = () => {
                 name: organization,
                 value: amount
             })
-            .then(res => console.log(res.data))
-            .catch(err => console.log(err));
-            
+                .then(res => console.log(res.data))
+                .catch(err => console.log(err));
+
             alert("Thank you for your donation of $" + amount + " to " + organization + "!")
         }
     };
@@ -29,29 +28,16 @@ const DonateForm = () => {
     return (
 
         <div>
-            <div class="row">
-                <div class="col-5">
-                    <h2 id="donatetitle">Donate Form</h2>
-                </div>
-                <div class="col-7"></div>
-            </div>
-            <div class="row">
-                <div class="col-8">
-                    <p id="selectdonate">Select an organization and fill in the amount of your financial contribution.</p>
-                </div>
-                <div class="col-4"></div>
 
-            </div>
+            <h2 id="donatetitle">Donation Form</h2>
 
-
-            <h1 id="donatetitle">Donate Form</h1>
             <p id="selectdonate">Select an organization and fill in the amount of your financial contribution.</p>
 
             <form>
 
                 <div className="form-row">
                     <div className="form-group col-md-4">
-                        <label htmlFor="inputOrganization">Name of Organization</label>
+                        <label htmlFor="inputOrganization">Organization</label>
                         <select id="inputOrganization" name="organization" className="form-control"
                             onChange={(event) => setOrganization(event.target.value)}>
                             <option defaultValue>Select organization...</option>
@@ -63,7 +49,7 @@ const DonateForm = () => {
                             <option value="Whispering Manes Therapeutic Riding Center">Whispering Manes Therapeutic Riding Center</option>
                             <option value="Take Stock in Children">Take Stock in Children</option>
                             <option value="American Childrens Orchestras for Peace">American Childrens Orchestras for Peace</option>
-                            <option value="NatioNational Voices for Equality Education and Enlightenmentnal">National Voices for Equality Education and Enlightenment</option>
+                            <option value="National Voices for Equality Education and Enlightenment">National Voices for Equality Education and Enlightenment</option>
                             <option value="Veterans Ocean Adventures Inc">Veterans Ocean Adventures, Inc</option>
                             <option value="Sandals Foundation Inc">Sandals Foundation Inc</option>
                             <option value="Art Studio Inc">Art Studio Inc</option>

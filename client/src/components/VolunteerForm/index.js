@@ -5,15 +5,14 @@ import Calendar from 'react-calendar';
 import moment from "moment";
 
 const VolunteerForm = () => {
-          
+
     const [organization, setOrganization] = useState("");
     const [amount, setAmount] = useState("");
     const [date, onChange] = useState(new Date());
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(organization, amount, date);
-        // axios.post("/api/time/", {organization, amount, value});
+        // console.log(organization, amount, date);
         if (!organization) {
             alert("Please select an organization")
         } else if (!amount) {
@@ -26,26 +25,27 @@ const VolunteerForm = () => {
                 value: amount,
                 date: date
             })
-            .then(res => console.log(res.data))
-            .catch(err => console.log(err));
-            alert("Thank you for your interest in " + organization + "! We will be in touch soon to coordinate the details of your volunteer service.")
-    }
-};    
+                .then(res => console.log(res.data))
+                .catch(err => console.log(err));
+
+            alert("Thank you for your interest in " + organization + "! We will be in touch soon to coordinate the details of your volunteer service.");
+        }
+    };
 
     return (
 
         <div>
 
-            <h1 id="volform">Volunteer Form</h1>
-            <p id="select">Select an organization, how may hours you would like to contribute, and the date of your availability.</p>
+            <h2 id="volform">Volunteer Form</h2>
+            <p id="volparagraph">Select an organization, how many hours you would like to contribute, and the date of your availability.</p>
 
             <form>
-                           
+
                 <div className="form-row">
                     <div className="form-group col-md-4">
-                        <label htmlFor="inputOrganization">Name of Organization</label>
+                        <label htmlFor="inputOrganization">Organization</label>
                         <select id="inputOrganization" name="organization" className="form-control"
-                        onChange={(event) => setOrganization(event.target.value)}>
+                            onChange={(event) => setOrganization(event.target.value)}>
                             <option defaultValue>Select organization...</option>
                             <option value="Women of Tomorrow">Women of Tomorrow</option>
                             <option value="Cat Network, Inc.">Cat Network, Inc.</option>
@@ -55,7 +55,7 @@ const VolunteerForm = () => {
                             <option value="Whispering Manes Therapeutic Riding Center">Whispering Manes Therapeutic Riding Center</option>
                             <option value="Take Stock in Children">Take Stock in Children</option>
                             <option value="American Childrens Orchestras for Peace">American Childrens Orchestras for Peace</option>
-                            <option value="NatioNational Voices for Equality Education and Enlightenmentnal">National Voices for Equality Education and Enlightenment</option>
+                            <option value="National Voices for Equality Education and Enlightenment">National Voices for Equality Education and Enlightenment</option>
                             <option value="Veterans Ocean Adventures, Inc">Veterans Ocean Adventures, Inc</option>
                             <option value="Sandals Foundation Inc">Sandals Foundation Inc</option>
                             <option value="Art Studio Inc">Art Studio Inc</option>
@@ -74,8 +74,8 @@ const VolunteerForm = () => {
                     <div className="form-group">
                         <label htmlFor="inputHoursAvailable">Amount of Hours Available</label>
                         <input type="text" className="form-control" id="inputHoursAvailable" placeholder="e.g. 3 hours"
-                        value={amount}
-                        onChange={(event) => setAmount(event.target.value)}></input>
+                            value={amount}
+                            onChange={(event) => setAmount(event.target.value)}></input>
                     </div>
 
                     <div className="form-group">
@@ -85,9 +85,9 @@ const VolunteerForm = () => {
 
                             <Calendar
                                 onChange={onChange}
-                                // value={moment(date).format('MMMM Do YYYY')}
                                 value={date}
-                                minDate={moment().toDate()}                                
+                                minDate={moment().toDate()}
+                                calendarType={"US"}
                             />
                         </div>
 

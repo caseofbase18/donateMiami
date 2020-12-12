@@ -20,16 +20,22 @@ export default {
     return axios.get("/api/nonProfits");
   },
 
+  addFavorite: function(id) {
+    return axios.post(`/api/nonProfits/${id}`);
+  },
 
-  // addFavorite: function(id) {
-  //   return axios.put("/api/nonProfits/:id");
-  // },
-  // push id into favorites array ??
+  removeFavorite: function(id) {
+    return axios.delete(`/api/nonProfits/${id}`);
+  },
 
-  // deleteFavorite: function(id) {
-  //   return axios.get("/api/nonProfits/:id");
-  // }
-  // filter nonProfits where id !=id
+
+  
+
+  getFavorites: function(userData) {
+    return axios.get("/api/account", userData);
+  },
+
+
 
 
 

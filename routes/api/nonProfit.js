@@ -1,5 +1,6 @@
 const router = require("express").Router();
-const nonProfitController = require("../../controllers/nonProfitController")
+const nonProfitController = require("../../controllers/nonProfitController");
+const userController = require("../../controllers/userController");
 
 router.route("/")
     .get(nonProfitController.findAll)
@@ -7,8 +8,11 @@ router.route("/")
 
 router.route("/:id")
     .get(nonProfitController.findOne)
-    .delete(nonProfitController.remove)
     
-    .put(nonProfitController.update);
+    // .put(nonProfitController.update)
+    .post(userController.addFavorite)
+    .delete(userController.removeFavorite);
+
+
 
 module.exports = router;
