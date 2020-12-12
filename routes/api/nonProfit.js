@@ -10,6 +10,7 @@ router.route("/:id")
     .get(nonProfitController.findOne)
     
     // .put(nonProfitController.update)
+    
     .post(userController.addFavorite)
     .delete(userController.removeFavorite);
 

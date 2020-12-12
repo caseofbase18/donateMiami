@@ -19,8 +19,8 @@ function Signup() {
     // };
 
     function handleSubmit(event) {
-        event.preventDefault();
-        console.log(email, password, first, last, address, city, stateInitials, zip, phone);
+        // event.preventDefault();
+        // console.log(email, password, first, last, address, city, stateInitials, zip, phone);
         API.signUp({
             email: email,
             password: password,
