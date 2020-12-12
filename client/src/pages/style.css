@@ -306,22 +306,19 @@ label {
    font-weight: bold;
 }
 
-/* formats title for homepage */
-#hometitle {
-   font-family: 'Proza Libre', sans-serif;
-   padding-left: 15px;
-   border-radius: 5px;
-   color: #a6cc38;
-   font-weight: bold;
-   text-decoration: underline;
-}
-
 /* formats subtitle for homepage */
 #homepage {
-   padding-left: 15px;
    border-radius: 5px;
-   color: #029A30;
    font-weight: bold;
+   text-align: center;
+}
+
+/* formats buttons on homepage */
+#homebutton {
+   background-color: #029A30;
+   border: 1px solid #029A30;
+   padding: 10px 10px 10px 10px;
+   margin-right: 35px;
 }
 
 /* formats navlinks */

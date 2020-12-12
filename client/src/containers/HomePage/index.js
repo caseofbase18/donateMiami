@@ -8,15 +8,27 @@ import FooterSmall from '../../components/FooterSmall';
 const HomePage = () => {
     return <div>
 
-        <Header />
+        <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+        }}>
+            <Header />
+        </div>
 
-        <h2 id="hometitle">Welcome to Donate Miami!</h2>
 
         <p id="homepage">
-            <Link to="/login">Login</Link> or <Link to="/signup"> Sign up </Link> to make a donation to a local charity in Miami-Dade County.
+            <button id="homebutton"><Link to="/login" style={{color: 'white'}}> Login </Link></button>
+            <button id="homebutton"><Link to="/signup" style={{color: 'white'}}> Sign up </Link></button>
         </p>
 
-        <FooterSmall />
+        <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+        }}>
+            <FooterSmall />
+        </div>
 
     </div>
 }

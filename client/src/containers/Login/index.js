@@ -12,8 +12,6 @@ const LoginPage = () => {
     return <div>
         <Header />
 
-        <h2 id="logintitle">Login Page</h2>
-
         <LoginForm onLogIn={(account) => {
             localStorage.setItem("authorization-token", account.token);
             dispatch({
@@ -22,8 +20,13 @@ const LoginPage = () => {
             })
         }} />
 
-        <FooterSmall />
-
+        <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+        }}>
+            <FooterSmall />
+        </div>
 
     </div>
 }

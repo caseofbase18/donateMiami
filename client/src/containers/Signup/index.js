@@ -13,11 +13,10 @@ const SignupPage = () => {
     return <div>
         <Header />
 
-        <h2 id="signuptitle">Signup Page</h2>
-
         <p id="signuppage">Return to <Link to="/login">Login Page</Link></p>
 
         <SignupForm />
+
 
     </div>
 
