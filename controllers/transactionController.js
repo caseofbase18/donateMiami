@@ -15,7 +15,7 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
     save: function(req, res) {
-        console.log(req.user)
+        // console.log(req.user)
         db.Transaction
         // .create(req.body)
         .create({...req.body, user: req.user._id})

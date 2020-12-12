@@ -24,12 +24,12 @@ export default {
     return axios.post(`/api/nonProfits/${id}`);
   },
 
+  removeFavorite: function(id) {
+    return axios.delete(`/api/nonProfits/${id}`);
+  },
 
 
-
-  // removeFavorite: function(id) {
-  //   return axios.delete(`/api/nonProfits/${id}`);
-  // },
+  
 
   // getFavorites: function() {
   //   return axios.get("/api/nonProfits");

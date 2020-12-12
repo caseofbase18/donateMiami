@@ -17,7 +17,7 @@ function Table(props) {
   // When category selected, load non Profits from db
 
   useEffect(() => {
-    console.log(props.selectedCategory)
+    // console.log(props.selectedCategory)
     if (props.selectedCategory !== "Select category...") {
       const nonProfitClone = originalNonProfits.filter((nonProfit) => {
         return props.selectedCategory === nonProfit.category
@@ -34,7 +34,7 @@ function Table(props) {
       .then(res => {
         setNonProfits(res.data)
         setOriginalNonProfits(res.data)
-        console.log(props.selectedCategory, res.data)
+        // console.log(props.selectedCategory, res.data)
       })
       .catch(err => console.log(err));
   };
@@ -43,7 +43,7 @@ function Table(props) {
   // and add the nonProfit to the list of favorites
 
   function newFavorite(id) {
-    console.log(id);
+    // console.log(id);
     API.addFavorite(id)
       .then(res =>
         console.log(res.data)
