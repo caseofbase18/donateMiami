@@ -96,7 +96,7 @@ button {
    border-radius: 10px !important;
    font-weight: bold !important;
    display: inline-block; 
-   margin-right: 6px;
+   margin: 5px;
    /* opacity: 75%; */
 }
 
@@ -104,6 +104,8 @@ button {
    border-radius: 10px !important;
    font-weight: bold !important;
    background-color: #00b3e6 !important;
+   display: inline-block; 
+   margin: 5px;
    /* opacity: 85%; */
    /* font: bold !important; */
 }
