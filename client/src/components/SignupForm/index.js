@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import API from '../../utils/API';
 
-function Signup() {
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import { useHistory } from 'react-router-dom';
+
+function Signup(props) {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -13,13 +18,15 @@ function Signup() {
     const [zip, setZip] = useState("");
     const [phone, setPhone] = useState("");
 
+    const history = useHistory();
+
     // function handleInputChange(event) {
     //     const { name, value } = event.target;
     //     console.log(name, value);
     // };
 
     function handleSubmit(event) {
-        // event.preventDefault();
+        event.preventDefault();
         // console.log(email, password, first, last, address, city, stateInitials, zip, phone);
         API.signUp({
             email: email,
@@ -34,7 +41,11 @@ function Signup() {
         })
             .then(res => console.log(res.data))
             .catch(err => console.log(err));
-        alert(first + " " + last + " account created successfully!")
+
+        // toast("New account created successfully!");
+
+        // this line will take the new user to the login page 
+        history.push('/login?newaccount=true');
     };
 
     return (
@@ -167,6 +178,8 @@ function Signup() {
                 <button onClick={handleSubmit} className="btn btn-primary shadow">Submit!</button>
 
             </form>
+
+            <ToastContainer />
         </div>
     )
 }
