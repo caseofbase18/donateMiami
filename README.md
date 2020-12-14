@@ -6,6 +6,21 @@
 This is an app that will help users donate time or volunteer hours to non-profits in Miami.
 
 ## Screenshots
+### Dashboard
+![Screenshot (178)](https://user-images.githubusercontent.com/62854999/102028902-4e116780-3d7a-11eb-8122-3fcb0f23d7e0.png)
+### Donation Form
+![Screenshot (179)](https://user-images.githubusercontent.com/62854999/102028905-4ea9fe00-3d7a-11eb-8468-5cbf1680f6eb.png)
+### Donation History
+![Screenshot (180)](https://user-images.githubusercontent.com/62854999/102028906-4f429480-3d7a-11eb-9d07-3683d444a88e.png)
+### Volunteer Form
+![Screenshot (181)](https://user-images.githubusercontent.com/62854999/102028909-4f429480-3d7a-11eb-8cde-da03ece10f88.png)
+### Volunteer History
+![Screenshot (182)](https://user-images.githubusercontent.com/62854999/102028911-4fdb2b00-3d7a-11eb-8dd7-b2594599325c.png)
+### Favorites
+![Screenshot (183)](https://user-images.githubusercontent.com/62854999/102028912-4fdb2b00-3d7a-11eb-94dd-e58dba0f9f70.png)
+### Filter Results by Category
+![Screenshot (184)](https://user-images.githubusercontent.com/62854999/102028913-5073c180-3d7a-11eb-86bf-32d844056cca.png)
+
 
 ## Deployment
 
