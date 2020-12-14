@@ -1,36 +1,80 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import API from "../../utils/API";
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const DonateForm = () => {
 
-    const [organization, setOrganization] = useState("");
+    // Setting our component's initial state
+    const [nonProfits, setNonProfits] = useState([]);
+    const [organizationId, setOrganizationId] = useState("");
     const [amount, setAmount] = useState("");
+    const [selectedOrganization, setSelectedOrganization] = useState("");
+
+    // When component mounts, load non Profits from db
+    useEffect(() => {
+        loadNonProfits();
+        // checkOrganization();
+    }, []);
+
+    // Loads all nonProfits and sets them to nonProfits
+    function loadNonProfits() {
+        console.log("Loading Nonprofits...");
+        API.getNonProfits()
+            .then(res => {
+                setNonProfits(res.data)
+                checkOrganization(res.data)
+                // setOriginalNonProfits(res.data)
+                // console.log(props.selectedCategory, res.data)
+            })
+            .catch(err => console.log(err));
+    };
+
+    function checkOrganization(organizations) {
+
+        // console.log(window.location.href);
+        console.log("Checking Organization with... " + organizations.length + " # of organizations");
+
+        let url = window.location.href;
+
+        if (url.includes("?npid=")) {
+            const selectedOrganizationID = url.slice(url.indexOf("?npid=") + "?npid=".length);
+            const selectedOrganizationData = organizations.filter((nonProfit) => {
+                return selectedOrganizationID === nonProfit._id;
+            });
+
+            setOrganizationId(selectedOrganizationData[0]._id);
+            setSelectedOrganization(selectedOrganizationData[0]);
+            console.log(selectedOrganizationData);
+        }
+    }
+
 
     function handleSubmit(event) {
         event.preventDefault();
-        // console.log(organization, amount);
-        if (!organization) {
-            alert("Please select an organization")
+        if (!organizationId || organizationId == "Select organization...") {
+            toast("Please select an organization")
         } else if (!amount) {
-            alert("Please enter a dollar amount")
+            toast("Please enter a dollar amount")
         } else {
+
+            const finalOrganization = nonProfits.filter((nonProfit) => {
+                return organizationId === nonProfit._id;
+            });
+
             API.saveTransaction({
-                name: organization,
+                name: finalOrganization[0].name,
                 value: amount
             })
                 .then(res => console.log(res.data))
                 .catch(err => console.log(err));
 
-            alert("Thank you for your donation of $" + amount + " to " + organization + "!")
-
-            // clearForm();
+            console.log(finalOrganization);
+            toast("Thank you for your donation of $" + amount + " to " + finalOrganization[0].name + "!")
+            
         }
     };
-
-    // function clearForm({
-    //     organization="",
-    //     amount=""
-    // });
 
     return (
 
@@ -46,28 +90,18 @@ const DonateForm = () => {
                     <div className="form-group col-md-4">
                         <label htmlFor="inputOrganization">Organization</label>
                         <select id="inputOrganization" name="organization" className="form-control"
-                            onChange={(event) => setOrganization(event.target.value)}>
-                            <option defaultValue>Select organization...</option>
-                            <option value="Women of Tomorrow">Women of Tomorrow</option>
-                            <option value="Cat Network Inc">Cat Network, Inc.</option>
-                            <option value="Pelican Harbor Seabird Station Inc">Pelican Harbor Seabird Station, Inc.</option>
-                            <option value="Joshuas Heart Foundation Inc">Joshuas Heart Foundation Inc</option>
-                            <option value="Cuatrogatos Foundation Inc">Cuatrogatos Foundation Inc</option>
-                            <option value="Whispering Manes Therapeutic Riding Center">Whispering Manes Therapeutic Riding Center</option>
-                            <option value="Take Stock in Children">Take Stock in Children</option>
-                            <option value="American Childrens Orchestras for Peace">American Childrens Orchestras for Peace</option>
-                            <option value="National Voices for Equality Education and Enlightenment">National Voices for Equality Education and Enlightenment</option>
-                            <option value="Veterans Ocean Adventures Inc">Veterans Ocean Adventures, Inc</option>
-                            <option value="Sandals Foundation Inc">Sandals Foundation Inc</option>
-                            <option value="Art Studio Inc">Art Studio Inc</option>
-                            <option value="Bridge to Hope">Bridge to Hope</option>
-                            <option value="Project Medishare for Haiti Inc">Project Medishare for Haiti Inc</option>
-                            <option value="Universal Aid for Children Inc">Universal Aid for Children, Inc.</option>
-                            <option value="Biscayne Bay Foundation">Biscayne Bay Foundation</option>
-                            <option value="Amigos Near Foundation">Amigos Near Foundation</option>
-                            <option value="Mystic Force Foundation">Mystic Force Foundation</option>
-                            <option value="Sundari Foundation Inc">Sundari Foundation, Inc.</option>
-                            <option value="Artefactus Cultural Project">Artefactus Cultural Project</option>
+                            onChange={(event) => setOrganizationId(event.target.value)}>
+                            <option>Select organization...</option>
+
+                            {nonProfits.map((nonProfit) => {
+                                return (
+
+                                    <option selected={selectedOrganization.name == nonProfit.name ? 'selected' : null}
+                                        key={nonProfit._id} value={nonProfit._id}>{nonProfit.name}</option>
+
+                                )
+                            })})
+
                         </select>
                     </div>
 
@@ -84,6 +118,8 @@ const DonateForm = () => {
             </form>
 
             <br></br>
+
+            <ToastContainer />
         </div>
     )
 }

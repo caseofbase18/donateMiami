@@ -338,5 +338,12 @@ label {
    color: #029A30;
 }
 
+.Toastify__toast--default {
+   background-color:  #eb008b !important;
+   color: white;
+   font-weight: bold;
+   border-radius: 10px;
+}
+
 
 

@@ -3,10 +3,10 @@ import Header from "../../components/Header";
 import { Link } from 'react-router-dom';
 
 import SignupForm from '../../components/SignupForm';
-// import SignupAlert from '../../components/Snackbar';
+
 import { useStoreContext } from '../../utils/GlobalState';
-import { LOG_IN } from '../../utils/actions';
-import FooterSmall from '../../components/FooterSmall';
+// import { LOG_IN } from '../../utils/actions';
+// import FooterSmall from '../../components/FooterSmall';
 
 const SignupPage = () => {
     const [state, dispatch] = useStoreContext();
@@ -16,7 +16,6 @@ const SignupPage = () => {
         <p id="signuppage">Return to <Link to="/login">Login Page</Link></p>
 
         <SignupForm />
-
 
     </div>
 
