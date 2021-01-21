@@ -2,8 +2,10 @@
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description
-
 This is an app that will help users donate time or volunteer hours to non-profits in Miami.
+
+## Deployment
+https://limitless-cliffs-47046.herokuapp.com/home
 
 ## Screenshots
 ### Dashboard
@@ -20,9 +22,6 @@ This is an app that will help users donate time or volunteer hours to non-profit
 ![Screenshot (183)](https://user-images.githubusercontent.com/62854999/102028912-4fdb2b00-3d7a-11eb-94dd-e58dba0f9f70.png)
 ### Filter Results by Category
 ![Screenshot (184)](https://user-images.githubusercontent.com/62854999/102028913-5073c180-3d7a-11eb-86bf-32d844056cca.png)
-
-
-## Deployment
 
 ## Table of Contents
 
